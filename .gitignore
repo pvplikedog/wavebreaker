@@ -211,3 +211,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/unity,macos,rider,windows
+
+.DS_Store
+bin
+.vscode
+.idea
