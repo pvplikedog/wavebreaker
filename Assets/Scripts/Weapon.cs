@@ -1,11 +1,21 @@
 using System;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Weapon : MonoBehaviour
 {
+   [Header("Unity Setup Fields")]
    [SerializeField] private Transform target;
-   [SerializeField] private float range = 2.5f;
    [SerializeField] private string enemyTag = "Enemy";
+   
+   [Header("Weapon setup")]
+   [SerializeField] private float range = 2.5f;
+   
+   [SerializeField] private float fireRate = 1f;
+   private float fireCountdown = 0f;
+
+   [SerializeField] private GameObject bulletPrefab;
+   [SerializeField] private Transform firePoint;
 
    private void Start()
    {
@@ -25,7 +35,7 @@ public class Weapon : MonoBehaviour
             nearestEnemy = enemy;
          }
       }
-      if (nearestEnemy != null && shortestDistance <= range)
+      if (nearestEnemy && shortestDistance <= range)
       {
          target = nearestEnemy.transform;
       }
@@ -37,9 +47,28 @@ public class Weapon : MonoBehaviour
 
    private void Update()
    {
-      if (target == null)
+      if (!target)
       {     
          return;
+      }
+
+      if (fireCountdown <= 0f)
+      {
+         Shoot();
+         fireCountdown = 1f / fireRate;
+      }
+      
+      fireCountdown -= Time.deltaTime;
+   }
+   
+   private void Shoot()
+   {
+      GameObject BulletGO =  Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+      Bullet bullet = BulletGO.GetComponent<Bullet>();
+      
+      if (bullet)
+      {
+         bullet.Seek(target);
       }
    }
 

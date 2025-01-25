@@ -1,168 +1,265 @@
 fileFormatVersion: 2
-guid: ed7554aeefd5da44a9fe1ee9b93afe77
+guid: 29c9cded5e558164aaf8c9bf08aa1510
+AssetOrigin:
+  serializedVersion: 1
+  productId: 187605
+  packageName: Pixel Art Top Down - Basic
+  packageVersion: 1.1.2
+  assetPath: Assets/Cainos/Pixel Art Top Down - Basic/Texture/TX Props.png
+  uploadId: 700957
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 21300000
-    second: TX Shadow Chest
+    second: TX Props Chest
   - first:
       213: 21300002
-    second: TX Shadow Cube
+    second: TX Props Grass A
   - first:
       213: 21300004
-    second: TX Shadow Crate
+    second: TX Props Grass B
   - first:
       213: 21300006
-    second: TX Shadow Crate Small
+    second: TX Props Grass C
   - first:
       213: 21300008
-    second: TX Shadow Chest Opened
+    second: TX Props Grass D
   - first:
       213: 21300010
-    second: TX Shadow Rune Pillar X2
+    second: TX Props Grass E
   - first:
       213: 21300012
-    second: TX Shadow Rune Pillar X3
+    second: TX Props Grass F
   - first:
       213: 21300014
-    second: TX Shadow Rune Pillar Broken
+    second: TX Props Grass G
   - first:
       213: 21300016
-    second: TX Shadow Tileset Wall 3
+    second: TX Props Grass H
   - first:
       213: 21300018
-    second: TX Shadow Tileset Wall 2
+    second: TX Props Grass I
   - first:
       213: 21300020
-    second: TX Shadow Tileset Wall 1
+    second: TX Props Grass J
   - first:
       213: 21300022
-    second: TX Shadow Barrel
+    second: TX Props Grass K
   - first:
       213: 21300024
-    second: TX Shadow Gravestone A
+    second: TX Props Grass L
   - first:
       213: 21300026
-    second: TX Shadow Gravestone C
+    second: TX Props Grass M
   - first:
       213: 21300028
-    second: TX Shadow Gravestone B
+    second: TX Props Grass N
   - first:
       213: 21300030
-    second: TX Shadow Tree T3
+    second: TX Props Grass O
   - first:
       213: 21300032
-    second: TX Shadow Tileset Wall 5
+    second: TX Props Grass Flower
   - first:
       213: 21300034
-    second: TX Shadow Tileset Wall 4
+    second: TX Props Crate
   - first:
       213: 21300036
-    second: TX Shadow Stone Coffin Vert
+    second: TX Props Cube
   - first:
       213: 21300038
-    second: TX Shadow Stone Coffin Hori
+    second: TX Props Crate Small
   - first:
       213: 21300040
-    second: TX Shadow Bush A
+    second: TX Props Chest Opened
   - first:
       213: 21300042
-    second: TX Shadow Road Sign E
+    second: TX Props Rune Pillar X2
   - first:
       213: 21300044
-    second: TX Shadow Road Sign W
+    second: TX Props Rune Pillar X2 Glow
   - first:
       213: 21300046
-    second: TX Shadow Pot A
+    second: TX Props Stair S L
   - first:
       213: 21300048
-    second: TX Shadow Pot B
+    second: TX Props Stair S R
   - first:
       213: 21300050
-    second: TX Shadow Pot C
+    second: TX Props Stair NL
   - first:
       213: 21300052
-    second: TX Shadow Stone Bench S
+    second: TX Props Stair NU
   - first:
       213: 21300054
-    second: TX Shadow Stone Bench W
+    second: TX Props Stair NR
   - first:
       213: 21300056
-    second: TX Shadow Stone Bench E
+    second: TX Props Stair NM
   - first:
       213: 21300058
-    second: TX Shadow Stone T1
+    second: TX Props Rune Pillar X3
   - first:
       213: 21300060
-    second: TX Shadow Stone T2
+    second: TX Props Rune Pillar Broken
   - first:
       213: 21300062
-    second: TX Shadow Stone T3
+    second: TX Props Rune Pillar X3 Glow
   - first:
       213: 21300064
-    second: TX Shadow Stone T4
+    second: TX Props Rune Pillar Broken Glow
   - first:
       213: 21300066
-    second: TX Shadow Stone T5
+    second: TX Props Barrel
   - first:
       213: 21300068
-    second: TX Shadow Stone T6
+    second: TX Props Gravestone A
   - first:
       213: 21300070
-    second: TX Shadow Statue
+    second: TX Props Gravestone B
   - first:
       213: 21300072
-    second: TX Shadow Stone Lantern
+    second: TX Props Gravestone C
   - first:
       213: 21300074
-    second: TX Shadow Bridge Gate
+    second: TX Props Tree A
   - first:
       213: 21300076
-    second: TX Shadow Pillar
+    second: TX Props Stone Coffin V
   - first:
       213: 21300078
-    second: TX Shadow Pillar Broken
+    second: TX Props Stone Coffin H
   - first:
       213: 21300080
-    second: TX Shadow Tree T1
+    second: TX Props Bush A
   - first:
       213: 21300082
-    second: TX Shadow Tree T2
+    second: TX Props Tree T3 Lower
   - first:
       213: 21300084
-    second: TX Shadow Stone Cube
+    second: TX Props Tree T3 Upper
   - first:
       213: 21300086
-    second: TX Shadow Bush D
+    second: TX Props Road Sign E
   - first:
       213: 21300088
-    second: TX Shadow Bush C
+    second: TX Props Road Sign W
   - first:
       213: 21300090
-    second: TX Shadow Bush B
+    second: TX Props Pot A
   - first:
       213: 21300092
-    second: TX Shadow Bush E
+    second: TX Props Pot B
   - first:
       213: 21300094
-    second: TX Shadow Bush F
+    second: TX Props Pot C
   - first:
       213: 21300096
-    second: TX Shadow Altar
+    second: TX Props Stone Bench S
   - first:
       213: 21300098
-    second: TX Shadow Wooden Door
+    second: TX Props Stone Bench W
   - first:
       213: 21300100
-    second: TX Shadow Wooden Door Opened
+    second: TX Props Stone Bench E
   - first:
       213: 21300102
-    second: TX Shadow Well
+    second: TX Props Stone T1
   - first:
       213: 21300104
-    second: TX Shadow Stone T7
+    second: TX Props Stone T2
+  - first:
+      213: 21300106
+    second: TX Props Stone T3
+  - first:
+      213: 21300108
+    second: TX Props Stone T4
+  - first:
+      213: 21300110
+    second: TX Props Stone T5
+  - first:
+      213: 21300112
+    second: TX Props Stone T6
+  - first:
+      213: 21300114
+    second: TX Props Statue
+  - first:
+      213: 21300116
+    second: TX Props Stone Lantern
+  - first:
+      213: 21300118
+    second: TX Props Pillar
+  - first:
+      213: 21300120
+    second: TX Props Pillar Broken
+  - first:
+      213: 21300122
+    second: TX Props Tree T1 Lower
+  - first:
+      213: 21300124
+    second: TX Props Tree T1 Upper
+  - first:
+      213: 21300126
+    second: TX Props Tree T2 Lower
+  - first:
+      213: 21300128
+    second: TX Props Tree T2 Upper
+  - first:
+      213: 21300130
+    second: TX Props Stone Cube
+  - first:
+      213: 21300132
+    second: TX Props Bush C
+  - first:
+      213: 21300134
+    second: TX Props Bush B
+  - first:
+      213: 21300136
+    second: TX Props Bush D
+  - first:
+      213: 21300138
+    second: TX Props Bush E
+  - first:
+      213: 21300140
+    second: TX Props Bush F
+  - first:
+      213: 21300142
+    second: TX Props Altar
+  - first:
+      213: 21300144
+    second: TX Props Altar Rune 1
+  - first:
+      213: 21300146
+    second: TX Props Altar Rune 2
+  - first:
+      213: 21300148
+    second: TX Props Altar Rune 3
+  - first:
+      213: 21300150
+    second: TX Props Altar Rune 4
+  - first:
+      213: 21300152
+    second: TX Props Brick T1
+  - first:
+      213: 21300154
+    second: TX Props Brick T2
+  - first:
+      213: 21300156
+    second: TX Props Brick T3
+  - first:
+      213: 21300158
+    second: TX Props Wooden Gate
+  - first:
+      213: 21300160
+    second: TX Props Wooden Gate Opened
+  - first:
+      213: 21300162
+    second: TX Props Stone T7
+  - first:
+      213: 21300164
+    second: TX Props Well
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -179,11 +276,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -222,9 +320,10 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
   cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -234,9 +333,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -246,9 +346,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -258,9 +359,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -270,10 +372,11 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
+  - serializedVersion: 4
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -282,9 +385,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -294,978 +398,1132 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TX Shadow Chest
+      name: TX Props Chest
       rect:
         serializedVersion: 2
-        x: 97
+        x: 96
         y: 451
-        width: 36
-        height: 19
+        width: 32
+        height: 31
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d48f7f178dc17134e97b168dbc215b4f
+      spriteID: b1f6fb99112dfad4d835a6f2d178eaf4
       internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Cube
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 448
-        width: 39
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6eee887cbf42f324c923038905ea021c
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Crate
+      name: TX Props Crate
       rect:
         serializedVersion: 2
         x: 160
         y: 448
-        width: 39
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b12e88a6cdd4d9146ba077b645e0bd59
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Crate Small
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 387
-        width: 31
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ac038459861e48409de5ef178895bc0
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Chest Opened
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 387
-        width: 38
-        height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d8cedb90f2fb274dabc83bdbad0a97f
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Rune Pillar X2
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 452
-        width: 31
-        height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e594faac354e9574cb1deb4d5fc419e5
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Rune Pillar X3
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 355
-        width: 36
-        height: 43
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 550c795517c571442a0f2dc672422162
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Rune Pillar Broken
-      rect:
-        serializedVersion: 2
-        x: 227
-        y: 291
-        width: 31
-        height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bcc06ba2c3ba064eac74d7965f2977e
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Tileset Wall 3
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 160
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e788dd9c76750a84588254a99a9f99f4
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Tileset Wall 2
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 842ea99e4c7509f478e4b5e44ad29a0d
-      internalID: 21300018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Tileset Wall 1
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71c95277e1559a742a344c7f876cf41e
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Barrel
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 321
-        width: 30
-        height: 26
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5481478eeb4acc14dbe179e1f0c05498
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Gravestone A
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 232
-        width: 35
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6e1eed197a1a1d479b9fe5959f68024
-      internalID: 21300024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Gravestone C
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 232
-        width: 32
-        height: 20
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85dd7a856385c1442b59c18064a71420
-      internalID: 21300026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Gravestone B
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 169
-        width: 30
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3a94d3c0b1611547b9412f8d2c1b90a
-      internalID: 21300028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone Coffin Vert
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 300
-        width: 35
         height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a60c5745d7b6b1046a7a3cb3ea7d263f
-      internalID: 21300036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone Coffin Hori
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 392
-        width: 67
-        height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11794b8fa4203c444a9b6d2c6a7db992
-      internalID: 21300038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Tileset Wall 4
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53e9bcff4d3bc7e4cb271bda9c1a9ffa
+      spriteID: 82908114a4602e841adf7dcbea882039
       internalID: 21300034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Road Sign E
+      name: TX Props Cube
       rect:
         serializedVersion: 2
-        x: 102
-        y: 320
-        width: 26
-        height: 16
+        x: 32
+        y: 448
+        width: 32
+        height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68eff846fee593b42a69c656368a9834
+      spriteID: caa4ac10bb1af164ba7329b57a49d6eb
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Crate Small
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 387
+        width: 26
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1677bf923e384b41aeef58ef02451ac
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Chest Opened
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 386
+        width: 32
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21cc8de750e26c4418db5aec06ac8058
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Rune Pillar X2
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 451
+        width: 26
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff74cce1bffd1940b0067eab1029165
       internalID: 21300042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Road Sign W
+      name: TX Props Rune Pillar X2 Glow
       rect:
         serializedVersion: 2
-        x: 100
-        y: 256
-        width: 26
-        height: 16
+        x: 270
+        y: 457
+        width: 5
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9afe8389c7e7619478aeddf69601a21c
+      spriteID: 04e899bac27970c41b06e0bc124590eb
       internalID: 21300044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Pot A
+      name: TX Props Rune Pillar X3
       rect:
         serializedVersion: 2
-        x: 165
-        y: 261
-        width: 23
-        height: 19
+        x: 227
+        y: 355
+        width: 26
+        height: 66
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9ddd23dce7747540b7bfb19e88a047a
-      internalID: 21300046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Pot B
-      rect:
-        serializedVersion: 2
-        x: 164
-        y: 197
-        width: 28
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ab9f470ae8256e46b6e77c4193af665
-      internalID: 21300048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Pot C
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 132
-        width: 22
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b08130338c2bee498db794259d2a53a
-      internalID: 21300050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone Bench S
-      rect:
-        serializedVersion: 2
-        x: 295
-        y: 452
-        width: 60
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90bbec193fe3b8f43802ed0a4c5ae9bb
-      internalID: 21300052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone Bench W
-      rect:
-        serializedVersion: 2
-        x: 387
-        y: 449
-        width: 32
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 651ca72ed8ab5a248843afc3e431e00d
-      internalID: 21300054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone Bench E
-      rect:
-        serializedVersion: 2
-        x: 393
-        y: 353
-        width: 25
-        height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c7532952ddc38d4baeded4fdc5daa59
-      internalID: 21300056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone T1
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 10
-        width: 12
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e6268853104b4f41877bf0c35ba3a0b
+      spriteID: efe36c6e40d0485469a22ee3a8c43d63
       internalID: 21300058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone T2
+      name: TX Props Rune Pillar Broken
       rect:
         serializedVersion: 2
-        x: 40
-        y: 8
-        width: 17
-        height: 11
+        x: 227
+        y: 291
+        width: 26
+        height: 38
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32ce3578069c9df4cba79da1d6653ce9
+      spriteID: 9242e74a03e5ca44c988038d7bd535ef
       internalID: 21300060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone T3
+      name: TX Props Rune Pillar X3 Glow
       rect:
         serializedVersion: 2
-        x: 69
-        y: 6
-        width: 24
-        height: 12
+        x: 270
+        y: 361
+        width: 5
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8426eb361a48b0844ab88b726c59255c
+      spriteID: 2664a20451e28f14c80cbf6af8161452
       internalID: 21300062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone T4
+      name: TX Props Rune Pillar Broken Glow
       rect:
         serializedVersion: 2
-        x: 100
-        y: 6
-        width: 25
-        height: 13
+        x: 270
+        y: 297
+        width: 5
+        height: 12
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f93351bb458f1f4889e9e76998ca10b
+      spriteID: 242eff54a423efa47a89bf90227333ba
       internalID: 21300064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone T5
+      name: TX Props Barrel
       rect:
         serializedVersion: 2
-        x: 130
-        y: 6
-        width: 29
-        height: 15
+        x: 162
+        y: 323
+        width: 28
+        height: 36
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af515e5d5bbcfa44094ac67c9523cc1c
+      spriteID: c654252de1d0248408f223820a0e1cbd
       internalID: 21300066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone T6
+      name: TX Props Gravestone A
       rect:
         serializedVersion: 2
-        x: 162
-        y: 3
-        width: 29
-        height: 16
+        x: 225
+        y: 232
+        width: 30
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168159c21cf1ead40af8b33c4a3701b0
+      spriteID: dc492ddb4e760a642b4b66004e7d8035
       internalID: 21300068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Statue
+      name: TX Props Gravestone B
       rect:
         serializedVersion: 2
-        x: 446
-        y: 419
-        width: 38
-        height: 39
+        x: 227
+        y: 169
+        width: 26
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8365f5e45fda07a4daae5d6d38507873
+      spriteID: 2e60439295e4e7644ad0a07342ad1888
       internalID: 21300070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone Lantern
+      name: TX Props Gravestone C
       rect:
         serializedVersion: 2
-        x: 453
-        y: 357
-        width: 28
-        height: 26
+        x: 289
+        y: 232
+        width: 30
+        height: 29
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d4ff5dae6c48e64ebc93c0113e70b14
+      spriteID: ffaec41c67a3faf449914f854eb8bc02
       internalID: 21300072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Bridge Gate
+      name: TX Props Stone Coffin V
       rect:
         serializedVersion: 2
-        x: 480
-        y: 269
+        x: 288
+        y: 297
         width: 32
-        height: 51
+        height: 57
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6e619191113293498e197ea704e35b1
-      internalID: 21300074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Pillar
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 261
-        width: 44
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01617b7021499b547b1b216956c1f08d
+      spriteID: 3d2a41f1c608068448234d85047c41b0
       internalID: 21300076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Pillar Broken
+      name: TX Props Stone Coffin H
       rect:
         serializedVersion: 2
-        x: 416
-        y: 261
-        width: 35
+        x: 288
+        y: 389
+        width: 64
         height: 36
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8afb977edda7d0d47a1e918cbd54270f
+      spriteID: 171c9cb096b15c245a3cd88b5432aac0
       internalID: 21300078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone Cube
+      name: TX Props Road Sign E
       rect:
         serializedVersion: 2
-        x: 288
-        y: 160
-        width: 39
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 99
+        y: 320
+        width: 27
+        height: 32
+      alignment: 9
+      pivot: {x: 0.44592682, y: -0.0006246567}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b8e1f11767e2dd449da7824be541e0c
-      internalID: 21300084
+      spriteID: dbe5760aa2865644ea13d61dd3f342b3
+      internalID: 21300086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Altar
+      name: TX Props Road Sign W
       rect:
         serializedVersion: 2
-        x: 353
-        y: 171
-        width: 97
-        height: 72
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 96
+        y: 256
+        width: 27
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5602985, y: 0.0005931854}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72d0bb951837e944bb3a6a5c3f50dc10
+      spriteID: 3da5d538d57013843ac291c4c9e46929
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Pot A
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 261
+        width: 21
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be01852446f671a439e7ad76e7811b4c
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Pot B
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 197
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f38c86e0ce043e46b964592f21e62fb
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Pot C
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 132
+        width: 21
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8227cd1c1bd315f49bf300fc4e508b69
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Stone Bench S
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 452
+        width: 56
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d4bb3fed3596b4183e46c191e32f01
       internalID: 21300096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Wooden Door
+      name: TX Props Stone Bench W
       rect:
         serializedVersion: 2
-        x: 29
-        y: 359
-        width: 47
-        height: 28
+        x: 387
+        y: 449
+        width: 27
+        height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8cc49b3468d8094ea128f9c17abfac5
+      spriteID: f47af7350033e3347930ff4dbfd5a275
       internalID: 21300098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Wooden Door Opened
+      name: TX Props Stone Bench E
       rect:
         serializedVersion: 2
-        x: 29
-        y: 293
-        width: 45
-        height: 25
+        x: 387
+        y: 353
+        width: 27
+        height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de79f95d7fbf6ea4fa5c4e9a5c265ad7
+      spriteID: 32fc73f307b1b21428783a730cf93ef1
       internalID: 21300100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Well
+      name: TX Props Stone T1
       rect:
         serializedVersion: 2
-        x: 420
-        y: 104
-        width: 58
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 10
+        y: 10
+        width: 11
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 490b408573a5a954b94f5d72ba01cbac
+      spriteID: 04efb6706689a954099483d82705ac66
       internalID: 21300102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone T7
+      name: TX Props Stone T2
       rect:
         serializedVersion: 2
-        x: 3
-        y: 40
-        width: 60
-        height: 26
+        x: 40
+        y: 8
+        width: 16
+        height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 110ac675a6e079f42a2591210ec39735
+      spriteID: c2725f2ffd508c849a543d5f2296e9dd
       internalID: 21300104
       vertices: []
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TX Props Stone T3
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 6
+        width: 24
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f1cd708a4e38549ac76c0bb42f80a5
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Stone T4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 6
+        width: 24
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868e8d9471ab3e044a235381ac09f2cb
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Stone T5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 6
+        width: 27
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4523973d903298342b66cd31f993c273
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Stone T6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 3
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4982a074d12d60499f8bc9fcfdcbf3e
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Statue
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 419
+        width: 37
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d74dd78af59354299b24c2f2e529e9
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Stone Lantern
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 356
+        width: 22
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952c5d3ac754321439bb699de039407e
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Pillar
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 261
+        width: 32
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538b433b960d0524cae73e5731375a47
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Pillar Broken
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 261
+        width: 32
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fbe655b99eb4574dbf0ad8ac7afa291
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Stone Cube
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 32
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5dd0d5cfbac4745b3a4f04954eed7d
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Altar
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 171
+        width: 94
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fdc1b340834d34f851b10cadc9b613
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Altar Rune 1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 241
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c63f14737f51a49be7c0de7137a155
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Altar Rune 2
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 241
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bced06fb909dff4ab19bd0e6ce3b5ef
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Altar Rune 3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 234
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfa6583e87040f4b8dad4facf0dc338
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Altar Rune 4
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 234
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a587aa5413e7b9b40b6ef7914c56a32b
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Brick T1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 7
+        width: 18
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fad2c910645b54cbc6e71bf9d8c453
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Brick T2
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 8
+        width: 19
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3178f653003b97d4b9eff0800bbcb2b4
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Brick T3
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 7
+        width: 31
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b17b33797cd8ea4c8d5ad55ca4a3054
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Wooden Gate
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 359
+        width: 37
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03060c6f1d0adf4fad72ff01845d6fd
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Wooden Gate Opened
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 293
+        width: 37
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d945ff6be0b694a86e0288f4d3f290
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Stone T7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 40
+        width: 57
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf8f980c5adc4349955914ac1e51980
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Well
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 104
+        width: 58
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f70ad008ebefc4bb5915052e8339ff
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
-    spriteID: 901f89b6ee1d4c64cb2963d1fac91fa4
+    spriteID: c89561e7115ccae4cb9f395a5fee57ba
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      TX Shadow Stone Cube: 21300084
-      TX Shadow Pot A: 21300046
-      TX Shadow Stone T4: 21300064
-      TX Shadow Stone Bench W: 21300054
-      TX Shadow Chest Opened: 21300008
-      TX Shadow Road Sign E: 21300042
-      TX Shadow Pillar Broken: 21300078
-      TX Shadow Stone Bench E: 21300056
-      TX Shadow Crate Small: 21300006
-      TX Shadow Rune Pillar X3: 21300012
-      TX Shadow Pot C: 21300050
-      TX Shadow Pot B: 21300048
-      TX Shadow Pillar: 21300076
-      TX Shadow Gravestone B: 21300028
-      TX Shadow Stone Bench S: 21300052
-      TX Shadow Tileset Wall 1: 21300020
-      TX Shadow Stone Coffin Vert: 21300036
-      TX Shadow Tileset Wall 4: 21300034
-      TX Shadow Stone T3: 21300062
-      TX Shadow Gravestone C: 21300026
-      TX Shadow Rune Pillar X2: 21300010
-      TX Shadow Stone T5: 21300066
-      TX Shadow Road Sign W: 21300044
-      TX Shadow Altar: 21300096
-      TX Shadow Rune Pillar Broken: 21300014
-      TX Shadow Tileset Wall 3: 21300016
-      TX Shadow Crate: 21300004
-      TX Shadow Stone T6: 21300068
-      TX Shadow Chest: 21300000
-      TX Shadow Barrel: 21300022
-      TX Shadow Statue: 21300070
-      TX Shadow Bridge Gate: 21300074
-      TX Shadow Stone T7: 21300104
-      TX Shadow Stone Lantern: 21300072
-      TX Shadow Tileset Wall 2: 21300018
-      TX Shadow Well: 21300102
-      TX Shadow Stone T2: 21300060
-      TX Shadow Wooden Door: 21300098
-      TX Shadow Stone Coffin Hori: 21300038
-      TX Shadow Cube: 21300002
-      TX Shadow Wooden Door Opened: 21300100
-      TX Shadow Stone T1: 21300058
-      TX Shadow Gravestone A: 21300024
-  spritePackingTag: 
+      TX Props Altar: 21300142
+      TX Props Altar Rune 1: 21300144
+      TX Props Altar Rune 2: 21300146
+      TX Props Altar Rune 3: 21300148
+      TX Props Altar Rune 4: 21300150
+      TX Props Barrel: 21300066
+      TX Props Brick T1: 21300152
+      TX Props Brick T2: 21300154
+      TX Props Brick T3: 21300156
+      TX Props Chest: 21300000
+      TX Props Chest Opened: 21300040
+      TX Props Crate: 21300034
+      TX Props Crate Small: 21300038
+      TX Props Cube: 21300036
+      TX Props Gravestone A: 21300068
+      TX Props Gravestone B: 21300070
+      TX Props Gravestone C: 21300072
+      TX Props Pillar: 21300118
+      TX Props Pillar Broken: 21300120
+      TX Props Pot A: 21300090
+      TX Props Pot B: 21300092
+      TX Props Pot C: 21300094
+      TX Props Road Sign E: 21300086
+      TX Props Road Sign W: 21300088
+      TX Props Rune Pillar Broken: 21300060
+      TX Props Rune Pillar Broken Glow: 21300064
+      TX Props Rune Pillar X2: 21300042
+      TX Props Rune Pillar X2 Glow: 21300044
+      TX Props Rune Pillar X3: 21300058
+      TX Props Rune Pillar X3 Glow: 21300062
+      TX Props Statue: 21300114
+      TX Props Stone Bench E: 21300100
+      TX Props Stone Bench S: 21300096
+      TX Props Stone Bench W: 21300098
+      TX Props Stone Coffin H: 21300078
+      TX Props Stone Coffin V: 21300076
+      TX Props Stone Cube: 21300130
+      TX Props Stone Lantern: 21300116
+      TX Props Stone T1: 21300102
+      TX Props Stone T2: 21300104
+      TX Props Stone T3: 21300106
+      TX Props Stone T4: 21300108
+      TX Props Stone T5: 21300110
+      TX Props Stone T6: 21300112
+      TX Props Stone T7: 21300162
+      TX Props Well: 21300164
+      TX Props Wooden Gate: 21300158
+      TX Props Wooden Gate Opened: 21300160
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 187605
-  packageName: Pixel Art Top Down - Basic
-  packageVersion: 1.1.2
-  assetPath: Assets/Cainos/Pixel Art Top Down - Basic/Texture/TX Shadow.png
-  uploadId: 700957

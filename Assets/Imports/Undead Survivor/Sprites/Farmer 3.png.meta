@@ -1,9 +1,16 @@
 fileFormatVersion: 2
-guid: 0c187a32c5bde4747be8d00770b07403
+guid: 57a1443e67528144aa07582927559650
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238068
+  packageName: Undead Survivor Assets Pack
+  packageVersion: 1.3
+  assetPath: Assets/Undead Survivor/Sprites/Farmer 3.png
+  uploadId: 633846
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -67,7 +74,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -77,9 +84,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -89,9 +97,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -101,9 +110,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -113,9 +123,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -125,6 +136,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -141,12 +153,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 170de17234e803343a6c20aef49e885b
-      internalID: 1363809998
+      spriteID: 7e2b4788caacd844282a62b4e2ad1566
+      internalID: -2088749509
       vertices: []
       indices: 
       edges: []
@@ -162,12 +175,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62313fcb911a61e46aa3a8954bc85f02
-      internalID: -188091907
+      spriteID: 1bf0fef3e79fe034694fcc437dde75d9
+      internalID: -1836318166
       vertices: []
       indices: 
       edges: []
@@ -183,12 +197,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34a95c615897a654693fb683da536f75
-      internalID: 847793873
+      spriteID: 944816b4b17b43346ae045dc696ababd
+      internalID: -198311514
       vertices: []
       indices: 
       edges: []
@@ -204,12 +219,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 222b5a778dcba8a4fb901d77ede680f7
-      internalID: 937111007
+      spriteID: f74ac41b67e8eb44a8aa3e0dac809f47
+      internalID: -1997520891
       vertices: []
       indices: 
       edges: []
@@ -225,12 +241,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58f740299c01f7c48b62f08611801e2b
-      internalID: 1842362625
+      spriteID: 33c6f95c6aa48ed4185b3e95ca72205f
+      internalID: -1017442464
       vertices: []
       indices: 
       edges: []
@@ -246,12 +263,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bf3841bbcfc06f4ba764f233e2d1657
-      internalID: -1732568499
+      spriteID: 8987a8a777ef17b44bb0a24113065353
+      internalID: -2066638598
       vertices: []
       indices: 
       edges: []
@@ -267,12 +285,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56b4688dba7c34e478d58b23d3410fc0
-      internalID: -150523396
+      spriteID: 153147a80e7052d40a3281cea89791f3
+      internalID: 938132271
       vertices: []
       indices: 
       edges: []
@@ -288,12 +307,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b9da1d31d83fb147b467ea5280b30d1
-      internalID: -1592204662
+      spriteID: 11e7dae28fc0ec145a9535c13aabd657
+      internalID: -791905833
       vertices: []
       indices: 
       edges: []
@@ -309,12 +329,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08449be3d35d7424fb5d43232bf6e61d
-      internalID: 1438553564
+      spriteID: f07a3ecb7a76bbe439e343722bef9210
+      internalID: 1684076649
       vertices: []
       indices: 
       edges: []
@@ -330,12 +351,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e8d98fa7dde9614a8745ea39636d547
-      internalID: 381631601
+      spriteID: fb23b9d4f463a944289e397aa43f4c0d
+      internalID: 1883720508
       vertices: []
       indices: 
       edges: []
@@ -351,12 +373,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2230cec1e6c69541b57877f47723cf9
-      internalID: 1375599644
+      spriteID: 9449f4559947b3942a7ade3dc0346119
+      internalID: 369909130
       vertices: []
       indices: 
       edges: []
@@ -372,17 +395,19 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0c6d254416bf4a46aaccf863d4a3cef
-      internalID: 1929632063
+      spriteID: 2ed8cb88237c453409ff0d3733ab146a
+      internalID: 1773231339
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -392,28 +417,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      Stand 1: -1592204662
-      Run 0: 1363809998
-      Run 5: -1732568499
-      Stand 3: 381631601
-      Run 2: 847793873
-      Run 3: 937111007
-      Stand 0: -150523396
-      Stand 2: 1438553564
-      Run 4: 1842362625
-      Run 1: -188091907
-      Dead 1: 1929632063
-      Dead 0: 1375599644
+      Dead 0: 369909130
+      Dead 1: 1773231339
+      Run 0: -2088749509
+      Run 1: -1836318166
+      Run 2: -198311514
+      Run 3: -1997520891
+      Run 4: -1017442464
+      Run 5: -2066638598
+      Stand 0: 938132271
+      Stand 1: -791905833
+      Stand 2: 1684076649
+      Stand 3: 1883720508
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 238068
-  packageName: Undead Survivor Assets Pack
-  packageVersion: 1.3
-  assetPath: Assets/Undead Survivor/Sprites/Farmer 1.png
-  uploadId: 633846
