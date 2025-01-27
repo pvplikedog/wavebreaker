@@ -19,7 +19,7 @@ public class Weapon : MonoBehaviour
 
    private void Start()
    {
-      InvokeRepeating("UpdateTarget", 0f, 0.5f);
+      // InvokeRepeating("UpdateTarget", 0f, 0.5f);
    }
    void UpdateTarget()
    {
@@ -47,6 +47,7 @@ public class Weapon : MonoBehaviour
 
    private void Update()
    {
+      UpdateTarget();
       if (!target)
       {     
          return;

@@ -3,9 +3,13 @@ using Pathfinding;
 
 public class EnemyGFX : MonoBehaviour
 {
+    private const string IS_HIT = "Hit";
+    private const string IS_DEAD = "IsDead";
+
+    [SerializeField] private Animator animator;
     
     private AIPath aiPath;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Awake()
     {
         aiPath = GetComponent<AIPath>();
@@ -22,5 +26,16 @@ public class EnemyGFX : MonoBehaviour
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
+    }
+
+    public void PlayTakeDamgeAnimation()
+    {
+        animator.SetBool(IS_HIT, true);
+    }
+
+    public void PlayDeathAnimation()
+    {
+        aiPath.canMove = false;
+        animator.SetTrigger(IS_DEAD);
     }
 }
