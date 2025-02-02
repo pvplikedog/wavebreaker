@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float health = 100f;
     [SerializeField] private float damage = 10f;
-    [SerializeField] private float damageRate = 10f;
+    [SerializeField] private float damageRate = 3;
     private float _damageCountdown = 0f;
     private EnemyGFX _enemyGfx;
     private CircleCollider2D _collider;

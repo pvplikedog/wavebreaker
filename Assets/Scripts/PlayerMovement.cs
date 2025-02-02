@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     
+    [SerializeField] private RectTransform healthBarTransform;
+
     
     void Update()
     {
@@ -29,10 +32,12 @@ public class PlayerMovement : MonoBehaviour
         if (movement.x <= 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
+            healthBarTransform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
             transform.localScale = new Vector3(1, 1, 1);
+            healthBarTransform.localScale = new Vector3(1, 1, 1);
         }
     }
 
