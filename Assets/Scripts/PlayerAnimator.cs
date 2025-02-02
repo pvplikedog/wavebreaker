@@ -19,4 +19,9 @@ public class PlayerAnimator : MonoBehaviour
     {
         animator.SetBool(IS_WAKING, playerMovement.IsWalking());
     }
+    
+    public void PlayDeathAnimation()
+    {
+        animator.SetTrigger(IS_DEAD);
+    }
 }
