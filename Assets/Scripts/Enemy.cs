@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -13,6 +15,9 @@ public class Enemy : MonoBehaviour
     private bool _isPlayerInRange;
 
     private PlayerHealth _playerHealth;
+    
+    [Header("Loot")]
+    public List<LootItem> lootItems = new List<LootItem>();
 
     private void Awake()
     {
@@ -49,7 +54,28 @@ public class Enemy : MonoBehaviour
         gameObject.tag = "Untagged";
         _collider.enabled = false;
         _enemyGfx.PlayDeathAnimation();
+        DropLoot();
         Destroy(gameObject, 1f);
+    }
+
+    private void DropLoot()
+    {
+        foreach (LootItem lootItem in lootItems)
+        {
+            if (Random.Range(0f, 100f) <= lootItem.dropChance)
+            {
+                InstantiateLoot(lootItem.itemPrefab);
+                break;
+            }
+        }
+    }
+    
+    private void InstantiateLoot(GameObject loot)
+    {
+        if (loot)
+        {
+            GameObject droppedLoot = Instantiate(loot, transform.position, Quaternion.identity);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -58,7 +84,6 @@ public class Enemy : MonoBehaviour
         {
             _isPlayerInRange = true;
             _playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            //collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(10f);
         }
     }
 

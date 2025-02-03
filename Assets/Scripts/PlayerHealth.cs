@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100f;
-    private float _currentHealth = 100f;
+    private float _currentHealth;
     [SerializeField] private PlayerAnimator playerAnimator;
     private CircleCollider2D _collider;
     private PlayerMovement _playerMovement;
@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     
     private void Awake()
     {
+        _currentHealth = maxHealth;
         _collider = GetComponent<CircleCollider2D>();
         _playerMovement = GetComponent<PlayerMovement>();
         _playerCanvas = GetComponentInChildren<Canvas>();
