@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Serialization;
@@ -15,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     
     private void Awake()
     {
+        HealthItem.OnHealthItemCollect += Heal;
         _currentHealth = maxHealth;
         _collider = GetComponent<CircleCollider2D>();
         _playerMovement = GetComponent<PlayerMovement>();
@@ -25,12 +27,23 @@ public class PlayerHealth : MonoBehaviour
     {
         _currentHealth -= damage;
         
-        healthBar.fillAmount = _currentHealth / maxHealth;
+        UpdateHealthBar();
         
         if (_currentHealth <= 0)
         {
             Die();
         }
+    }
+
+    public void Heal(float heal)
+    {
+        _currentHealth = math.min(_currentHealth + heal, maxHealth);
+        UpdateHealthBar();
+    }
+
+    private void UpdateHealthBar()
+    {
+        healthBar.fillAmount = _currentHealth / maxHealth;
     }
     
     private void Die()

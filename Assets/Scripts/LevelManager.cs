@@ -22,7 +22,7 @@ public class LevelManager : MonoBehaviour
         _curXP += amount;
         while (_curXP >= XPToNextLvl)
         {
-            Debug.Log("LVL UP");
+            //Debug.Log("LVL UP");
             _curLvl += 1;
             levelText.text = $"LEVEL {_curLvl}";
             _curXP -= XPToNextLvl;

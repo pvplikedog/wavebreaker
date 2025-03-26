@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class GunBullet : MonoBehaviour
 {
     private Transform target;
 
