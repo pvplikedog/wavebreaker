@@ -12,7 +12,8 @@ public class CircleProjectile : MonoBehaviour
     
     private void Start()
     {
-        projVisual.localScale = new Vector3(range * 2, range * 2, 1);
+        projVisual.localScale = new Vector3(projVisual.localScale.x * range * 2, projVisual.localScale.y * range * 2, projVisual.localScale.z);
+        // projVisual.localScale = new Vector3(range * 2, range * 2, 1);
     }
     
     private void Update()
