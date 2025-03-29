@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     
     [SerializeField] private RectTransform healthBarTransform;
+    
+    [SerializeField] private GameManager gameManager;
 
     
     void Update()
@@ -29,6 +31,10 @@ public class PlayerMovement : MonoBehaviour
 
     void ChangeRotation()
     {
+        if (gameManager.currentState != GameManager.GameState.GamePlay)
+        {
+            return;
+        }
         if (movement.x <= 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);

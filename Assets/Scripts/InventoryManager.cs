@@ -7,7 +7,10 @@ public class InventoryManager : MonoBehaviour
     public List<Weapon> weaponSlots = new List<Weapon>(6);
     public List<Image> weaponUISlots = new List<Image>(6);
     
-    private int currentWeaponIndex = 0;
+    public List<Image> passiveUISlots = new List<Image>(6);
+    
+    public int currentWeaponIndex = 0;
+    public int currentPassiveIndex = 0;
 
     public void AddWeapon(Weapon weapon)
     {

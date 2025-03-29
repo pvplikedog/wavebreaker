@@ -30,4 +30,9 @@ public class LevelManager : MonoBehaviour
         }
         levelBar.fillAmount = _curXP / XPToNextLvl;
     }
+
+    public int GetCurrentLevel()
+    {
+        return _curLvl;
+    }
 }

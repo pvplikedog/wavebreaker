@@ -13,6 +13,9 @@ public class PlayerHealth : MonoBehaviour
     private Canvas _playerCanvas;
 
     [SerializeField] private Image healthBar;
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private InventoryManager inventoryManager;
     
     private void Awake()
     {
@@ -48,6 +51,11 @@ public class PlayerHealth : MonoBehaviour
     
     private void Die()
     {
+        if (!gameManager.IsGameOver)
+        {
+            Invoke("GameOver", 1.5f);
+            //gameManager.GameOver();
+        }
         gameObject.tag = "Untagged";
         _collider.enabled = false;
         playerAnimator.PlayDeathAnimation();
@@ -55,5 +63,12 @@ public class PlayerHealth : MonoBehaviour
         _playerCanvas.enabled = false;
         Destroy(gameObject, 2f);
         //Time.timeScale = 0;
+    }
+
+    private void GameOver()
+    {
+        gameManager.AssignLevelReached(levelManager.GetCurrentLevel());
+        gameManager.AssignChoosenWeaponsAndPassives(inventoryManager.weaponUISlots, inventoryManager.currentWeaponIndex, inventoryManager.passiveUISlots, inventoryManager.currentPassiveIndex);
+        gameManager.GameOver();
     }
 }

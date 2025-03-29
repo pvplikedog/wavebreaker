@@ -15,6 +15,7 @@ public abstract class Weapon : MonoBehaviour
    }
    protected float _fireCountdown = 0f;
    protected int _curLvl = 1;
+   protected int _maxLvl = 5;
 
    public abstract void Upgrade();
 }
