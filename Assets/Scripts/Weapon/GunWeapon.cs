@@ -6,7 +6,7 @@ public class GunWeapon : Weapon
     
     [SerializeField] private Transform target;
     
-    [SerializeField] private float range = 2.5f;
+    [SerializeField] private float range = 3f;
 
     private void Update()
     {
@@ -68,9 +68,25 @@ public class GunWeapon : Weapon
     
     public override void Upgrade()
     {
-        // Just for test. 
-        fireRate *= 1.1f;
-        range *= 1.1f;
-        _curLvl++;
+        switch (_curLvl)
+        {
+            case 1:
+                fireRate *= 2;
+                _curLvl++;
+                break;
+            case 2:
+                range *= 1.5f;
+                _curLvl++;
+                break;
+            case 3:
+                fireRate *= 1.5f;
+                _curLvl++;
+                break;
+            case 4:
+                fireRate *= 1.5f;
+                range *= 1.5f;
+                _curLvl++;
+                break;
+        }
     }
 }

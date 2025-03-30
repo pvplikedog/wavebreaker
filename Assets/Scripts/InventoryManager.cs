@@ -14,7 +14,7 @@ public class InventoryManager : MonoBehaviour
 
     public void AddWeapon(Weapon weapon)
     {
-        weaponSlots[currentWeaponIndex] = weapon;
+        // weaponSlots[currentWeaponIndex] = weapon;
         weaponUISlots[currentWeaponIndex].sprite = weapon.Icon;
         weaponUISlots[currentWeaponIndex].color = new Color(1f, 1f, 1f, 1f);
         currentWeaponIndex++;

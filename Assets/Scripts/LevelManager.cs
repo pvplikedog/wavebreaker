@@ -12,6 +12,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Image levelBar;
     [SerializeField] private TMP_Text levelText;
 
+    [SerializeField] private GameManager gameManager;
+    
     private void Start()
     {
         Exp.OnExpCollect += IncreaseXP;
@@ -20,15 +22,22 @@ public class LevelManager : MonoBehaviour
     private void IncreaseXP(float amount)
     {
         _curXP += amount;
-        while (_curXP >= XPToNextLvl)
+        int levelsToUp = 0;
+        while (_curXP >= XPToNextLvl && !gameManager.ChoosingUpgrade)
         {
-            //Debug.Log("LVL UP");
+            // Debug.Log("LVL UP");
             _curLvl += 1;
             levelText.text = $"LEVEL {_curLvl}";
             _curXP -= XPToNextLvl;
             XPToNextLvl *= 1.2f;
+            levelsToUp++;
         }
         levelBar.fillAmount = _curXP / XPToNextLvl;
+        if (levelsToUp > 0)
+        {
+            gameManager.StartLevelUp(levelsToUp);
+        }
+
     }
 
     public int GetCurrentLevel()

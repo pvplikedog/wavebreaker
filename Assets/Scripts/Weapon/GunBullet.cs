@@ -5,8 +5,8 @@ public class GunBullet : MonoBehaviour
 {
     private Transform target;
 
-    [SerializeField] private float speed = 60f;
-    [SerializeField] private float damage = 50f;
+    [SerializeField] private float speed = 30f;
+    [SerializeField] private float damage = 5f;
 
     public void Seek(Transform target)
     {

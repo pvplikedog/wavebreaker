@@ -37,6 +37,28 @@ public class SkyFallWeapon : Weapon
 
     public override void Upgrade()
     {
-        throw new System.NotImplementedException();
+        switch (_curLvl)
+        {
+            case 1:
+                circlesAmount += 1;
+                circleRadius *= 1.5f;
+                _curLvl++;
+                break;
+            case 2:
+                damage *= 1.5f;
+                _curLvl++;
+                break;
+            case 3:
+                fireRate *= 2;
+                timeLast *= 1.5f;
+                _curLvl++;
+                break;
+            case 4:
+                circlesAmount += 1;
+                damage *= 1.5f;
+                circleRadius *= 1.5f;
+                _curLvl++;
+                break;
+        }
     }
 }

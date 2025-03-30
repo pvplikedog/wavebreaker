@@ -35,6 +35,27 @@ public class MeleeCircleWeapon : Weapon
     
     public override void Upgrade()
     {
-        throw new System.NotImplementedException();
+        switch (_curLvl)
+        {
+            case 1:
+                damage *= 2f;
+                fireRate *= 1.5f;
+                range *= 1.5f;
+                _curLvl++;
+                break;
+            case 2:
+                range *= 1.5f;
+                fireRate *= 1.5f;
+                _curLvl++;
+                break;
+            case 3:
+                damage *= 1.5f;
+                _curLvl++;
+                break;
+            case 4:
+                fireRate *= 2f;
+                _curLvl++;
+                break;
+        }
     }
 }

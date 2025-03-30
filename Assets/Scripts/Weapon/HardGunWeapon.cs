@@ -4,11 +4,11 @@ public class HardGunWeapon : Weapon
 {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform target;
-    [SerializeField] private float damage;
-    [SerializeField] private float timeLast;
-    [SerializeField] private float bulletFireRate;
-    [SerializeField] private float bulletRadius;
-    [SerializeField] private float bulletSpeed;
+    [SerializeField] private float damage = 10f;
+    [SerializeField] private float timeLast = 3f;
+    [SerializeField] private float bulletFireRate = 3f;
+    [SerializeField] private float bulletRadius = 0.2f;
+    [SerializeField] private float bulletSpeed = 1f;
     
     private void Update()
     {
@@ -54,6 +54,26 @@ public class HardGunWeapon : Weapon
 
     public override void Upgrade()
     {
-        throw new System.NotImplementedException();
+        switch (_curLvl)
+        {
+            case 1:
+                fireRate *= 2;
+                _curLvl++;
+                break;
+            case 2:
+                bulletRadius *= 1.5f;
+                bulletFireRate *= 1.5f;
+                _curLvl++;
+                break;
+            case 3:
+                damage *= 1.5f;
+                _curLvl++;
+                break;
+            case 4:
+                bulletRadius *= 1.5f;
+                damage *= 1.5f;
+                _curLvl++;
+                break;
+        }
     }
 }

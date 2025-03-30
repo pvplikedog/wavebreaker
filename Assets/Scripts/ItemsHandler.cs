@@ -10,33 +10,68 @@ public class ItemsHandler : MonoBehaviour
     
     [SerializeField] private InventoryManager inventoryManager;
     
-    public void AddGunWeapon()
+    public void AddOrUpgradeGunWeapon()
     {
-        GunWeapon.SetActive(true);
-        inventoryManager.AddWeapon(GunWeapon.GetComponent<Weapon>());
+        if (GunWeapon.activeSelf)
+        {
+            GunWeapon.GetComponent<Weapon>().Upgrade();
+        }
+        else
+        {
+            GunWeapon.SetActive(true);
+            inventoryManager.AddWeapon(GunWeapon.GetComponent<Weapon>());
+        }
     }
     
-    public void AddHardGunWeapon()
+    public void AddOrUpgradeHardGunWeapon()
     {
-        HardGunWeapon.SetActive(true);
-        inventoryManager.AddWeapon(HardGunWeapon.GetComponent<Weapon>());
+        if (HardGunWeapon.activeSelf)
+        {
+            HardGunWeapon.GetComponent<Weapon>().Upgrade();
+        }
+        else
+        {
+            HardGunWeapon.SetActive(true);
+            inventoryManager.AddWeapon(HardGunWeapon.GetComponent<Weapon>());
+        }
     }
     
-    public void AddMeleeCircleWeapon()
+    public void AddOrUpgradeMeleeCircleWeapon()
     {
-        MeleeCircleWeapon.SetActive(true);
-        inventoryManager.AddWeapon(MeleeCircleWeapon.GetComponent<Weapon>());
+        if (MeleeCircleWeapon.activeSelf)
+        {
+            MeleeCircleWeapon.GetComponent<Weapon>().Upgrade();
+        }
+        else
+        {
+            MeleeCircleWeapon.SetActive(true);
+            inventoryManager.AddWeapon(MeleeCircleWeapon.GetComponent<Weapon>());
+        }
     }
     
-    public void AddMeleeBoxWeapon()
+    public void AddOrUpgradeMeleeBoxWeapon()
     {
-        MeleeBoxWeapon.SetActive(true);
-        inventoryManager.AddWeapon(MeleeBoxWeapon.GetComponent<Weapon>());
+        if (MeleeBoxWeapon.activeSelf)
+        {
+            MeleeBoxWeapon.GetComponent<Weapon>().Upgrade();
+        }
+        else
+        {
+            MeleeBoxWeapon.SetActive(true);
+            inventoryManager.AddWeapon(MeleeBoxWeapon.GetComponent<Weapon>());
+        }
     }
     
-    public void AddSkyFallWeapon()
+    public void AddOrUpgradeSkyFallWeapon()
     {
-        SkyFallWeapon.SetActive(true);
-        inventoryManager.AddWeapon(SkyFallWeapon.GetComponent<Weapon>());
+        if (SkyFallWeapon.activeSelf)
+        {
+            SkyFallWeapon.GetComponent<Weapon>().Upgrade();
+        }
+        else
+        {
+            SkyFallWeapon.SetActive(true);
+            inventoryManager.AddWeapon(SkyFallWeapon.GetComponent<Weapon>());
+        }
     }
 }
