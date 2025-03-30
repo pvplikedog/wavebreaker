@@ -4,9 +4,7 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public List<Weapon> weaponSlots = new List<Weapon>(6);
     public List<Image> weaponUISlots = new List<Image>(6);
-    
     public List<Image> passiveUISlots = new List<Image>(6);
     
     public int currentWeaponIndex = 0;
@@ -14,9 +12,15 @@ public class InventoryManager : MonoBehaviour
 
     public void AddWeapon(Weapon weapon)
     {
-        // weaponSlots[currentWeaponIndex] = weapon;
         weaponUISlots[currentWeaponIndex].sprite = weapon.Icon;
         weaponUISlots[currentWeaponIndex].color = new Color(1f, 1f, 1f, 1f);
         currentWeaponIndex++;
+    }
+    
+    public void AddPassive(UpgradeOptionSO passive)
+    {
+        passiveUISlots[currentPassiveIndex].sprite = passive.Icon;
+        passiveUISlots[currentPassiveIndex].color = new Color(1f, 1f, 1f, 1f);
+        currentPassiveIndex++;
     }
 }

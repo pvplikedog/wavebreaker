@@ -13,7 +13,13 @@ public class UpgradeOptionSO : ScriptableObject
         MeleeCircle,
         MeleeBox,
         SkyFall,
-        Heal
+        Heal,
+        healthPassive,
+        regenPassive,
+        speedPassive,
+        damagePassive,
+        xpPassive,
+        damageReducePassive
     }
     
     public Sprite Icon;

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
+  m_Name: DamageReduce
+  m_EditorClassIdentifier: 
+  Icon: {fileID: -201829820, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  UpgradeType: 11
+  MaxLvl: 5
+  Names:
+  - Shield unlock
+  - Shield LVL 2
+  - Shield LVL 3
+  - Shield LVL 4
+  - Shield LVL 5
+  Descriptions:
+  - take 10% less damage
+  - take 20% less damage
+  - take 30% less damage
+  - take 40% less damage
+  - take 50% less damage

@@ -63,7 +63,7 @@ public class LevelUpManager : MonoBehaviour
             {
                 upgrade.CurrentLvl++;
             }
-            ChooseUpgrade(upgrade.upgradeOptionSO.UpgradeType);
+            ChooseUpgrade(upgrade.upgradeOptionSO);
         }
         else
         {
@@ -89,10 +89,9 @@ public class LevelUpManager : MonoBehaviour
         }
     }
     
-    private void ChooseUpgrade(UpgradeOptionSO.UpgradeOption upgradeOption)
+    private void ChooseUpgrade(UpgradeOptionSO upgradeOption)
     {
-        Debug.Log(upgradeOption);
-        switch (upgradeOption)
+        switch (upgradeOption.UpgradeType)
         {
             case UpgradeOptionSO.UpgradeOption.Gun:
                 itemsHandler.AddOrUpgradeGunWeapon();
@@ -111,6 +110,24 @@ public class LevelUpManager : MonoBehaviour
                 break;
             case UpgradeOptionSO.UpgradeOption.Heal:
                 playerHealth.Heal(25);
+                break;
+            case UpgradeOptionSO.UpgradeOption.healthPassive:
+                itemsHandler.AddOrUpgradeHealthLevel(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.regenPassive:
+                itemsHandler.AddOrUpgradeRegenerationLevel(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.speedPassive:
+                itemsHandler.AddOrUpgradeSpeedLevel(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.damagePassive:
+                itemsHandler.AddOrUpgradeDamageLevel(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.xpPassive:
+                itemsHandler.AddOrUpgradeXPLevel(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.damageReducePassive:
+                itemsHandler.AddOrUpgradeDamageReducerLevel(upgradeOption);
                 break;
         }
     }

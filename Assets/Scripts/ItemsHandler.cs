@@ -7,9 +7,10 @@ public class ItemsHandler : MonoBehaviour
     [SerializeField] private GameObject MeleeCircleWeapon;
     [SerializeField] private GameObject MeleeBoxWeapon;
     [SerializeField] private GameObject SkyFallWeapon;
-    
+
     [SerializeField] private InventoryManager inventoryManager;
-    
+    [SerializeField] private PassiveUpgradeManager passiveUpgradeManager;
+
     public void AddOrUpgradeGunWeapon()
     {
         if (GunWeapon.activeSelf)
@@ -22,7 +23,7 @@ public class ItemsHandler : MonoBehaviour
             inventoryManager.AddWeapon(GunWeapon.GetComponent<Weapon>());
         }
     }
-    
+
     public void AddOrUpgradeHardGunWeapon()
     {
         if (HardGunWeapon.activeSelf)
@@ -35,7 +36,7 @@ public class ItemsHandler : MonoBehaviour
             inventoryManager.AddWeapon(HardGunWeapon.GetComponent<Weapon>());
         }
     }
-    
+
     public void AddOrUpgradeMeleeCircleWeapon()
     {
         if (MeleeCircleWeapon.activeSelf)
@@ -48,7 +49,7 @@ public class ItemsHandler : MonoBehaviour
             inventoryManager.AddWeapon(MeleeCircleWeapon.GetComponent<Weapon>());
         }
     }
-    
+
     public void AddOrUpgradeMeleeBoxWeapon()
     {
         if (MeleeBoxWeapon.activeSelf)
@@ -61,7 +62,7 @@ public class ItemsHandler : MonoBehaviour
             inventoryManager.AddWeapon(MeleeBoxWeapon.GetComponent<Weapon>());
         }
     }
-    
+
     public void AddOrUpgradeSkyFallWeapon()
     {
         if (SkyFallWeapon.activeSelf)
@@ -73,5 +74,65 @@ public class ItemsHandler : MonoBehaviour
             SkyFallWeapon.SetActive(true);
             inventoryManager.AddWeapon(SkyFallWeapon.GetComponent<Weapon>());
         }
+    }
+
+    public void AddOrUpgradeHealthLevel(UpgradeOptionSO upgradeOptionSO)
+    {
+        if (passiveUpgradeManager.healthLevel == 0)
+        {
+            inventoryManager.AddPassive(upgradeOptionSO);
+        }
+
+        passiveUpgradeManager.UpgradeHealth();
+    }
+
+    public void AddOrUpgradeRegenerationLevel(UpgradeOptionSO upgradeOptionSO)
+    {
+        if (passiveUpgradeManager.regenerationLevel == 0)
+        {
+            inventoryManager.AddPassive(upgradeOptionSO);
+        }
+
+        passiveUpgradeManager.UpgradeRegeneration();
+    }
+
+    public void AddOrUpgradeSpeedLevel(UpgradeOptionSO upgradeOptionSO)
+    {
+        if (passiveUpgradeManager.speedLevel == 0)
+        {
+            inventoryManager.AddPassive(upgradeOptionSO);
+        }
+
+        passiveUpgradeManager.UpgradeSpeed();
+    }
+
+    public void AddOrUpgradeDamageLevel(UpgradeOptionSO upgradeOptionSO)
+    {
+        if (passiveUpgradeManager.damageLevel == 0)
+        {
+            inventoryManager.AddPassive(upgradeOptionSO);
+        }
+
+        passiveUpgradeManager.UpgradeDamage();
+    }
+
+    public void AddOrUpgradeXPLevel(UpgradeOptionSO upgradeOptionSO)
+    {
+        if (passiveUpgradeManager.xpLevel == 0)
+        {
+            inventoryManager.AddPassive(upgradeOptionSO);
+        }
+
+        passiveUpgradeManager.UpgradeXP();
+    }
+
+    public void AddOrUpgradeDamageReducerLevel(UpgradeOptionSO upgradeOptionSO)
+    {
+        if (passiveUpgradeManager.damageReducerLevel == 0)
+        {
+            inventoryManager.AddPassive(upgradeOptionSO);
+        }
+
+        passiveUpgradeManager.UpgradeDamageReducer();
     }
 }
