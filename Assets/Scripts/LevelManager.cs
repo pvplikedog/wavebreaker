@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour
 
     private void IncreaseXP(float amount)
     {
-        _curXP += amount;
+        _curXP += amount * PlayerStats.instance.XPMultiplier;
         int levelsToUp = 0;
         while (_curXP >= XPToNextLvl && !gameManager.ChoosingUpgrade)
         {

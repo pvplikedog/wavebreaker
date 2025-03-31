@@ -47,6 +47,12 @@ public class GameManager : MonoBehaviour
         DisableScreen();
     }
 
+    private void Start()
+    {
+        // Probably will change to random weapon on start
+        StartLevelUp(1);
+    }
+
     private void Update()
     {
         CheckIfShouldLvlUp();

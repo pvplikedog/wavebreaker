@@ -5,7 +5,6 @@ using UnityEngine.Serialization;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private float maxHealth = 100f;
     private float _currentHealth;
     [SerializeField] private PlayerAnimator playerAnimator;
     private CircleCollider2D _collider;
@@ -20,15 +19,28 @@ public class PlayerHealth : MonoBehaviour
     private void Awake()
     {
         HealthItem.OnHealthItemCollect += Heal;
-        _currentHealth = maxHealth;
+        _currentHealth = PlayerStats.instance.MaxHealth;
         _collider = GetComponent<CircleCollider2D>();
         _playerMovement = GetComponent<PlayerMovement>();
         _playerCanvas = GetComponentInChildren<Canvas>();
     }
+
+    private float _healCountdown = 0;
+    private void Update()
+    {
+        // Heals each second.
+        if (_healCountdown <= 0f)
+        {
+            Heal(PlayerStats.instance.RegenerationRate);
+            _healCountdown = 1f;
+        }
+      
+        _healCountdown -= Time.deltaTime;
+    }
     
     public void TakeDamage(float damage)
     {
-        _currentHealth -= damage;
+        _currentHealth -= damage * (1 - PlayerStats.instance.DamageReducer);
         
         UpdateHealthBar();
         
@@ -40,13 +52,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(float heal)
     {
-        _currentHealth = math.min(_currentHealth + heal, maxHealth);
+        _currentHealth = math.min(_currentHealth + heal, PlayerStats.instance.MaxHealth);
         UpdateHealthBar();
     }
 
     private void UpdateHealthBar()
     {
-        healthBar.fillAmount = _currentHealth / maxHealth;
+        healthBar.fillAmount = _currentHealth / PlayerStats.instance.MaxHealth;
     }
     
     private void Die()

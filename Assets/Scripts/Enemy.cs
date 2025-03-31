@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
     
     public void TakeDamage(float damage)
     {
-        health -= damage;
+        health -= damage * PlayerStats.instance.DamageMultiplier;
         _enemyGfx.PlayTakeDamgeAnimation();
         if (health <= 0)
         {
