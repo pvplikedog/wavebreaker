@@ -10,6 +10,12 @@ public class PassiveUpgradeManager : MonoBehaviour
     [HideInInspector] public int damageLevel = 0;
     [HideInInspector] public int xpLevel = 0;
     [HideInInspector] public int damageReducerLevel = 0;
+    // Statue:
+    [HideInInspector] public int statueHealthLevel = 0;
+    [HideInInspector] public int statueRegenLevel = 0;
+    [HideInInspector] public int statueFireRateLevel = 0;
+    [HideInInspector] public int statueDamageReducerLevel = 0;
+    
     private int maxLevel = 5;
 
     public void UpgradeHealth()
@@ -83,6 +89,58 @@ public class PassiveUpgradeManager : MonoBehaviour
         {
             ++damageReducerLevel;
             playerStats.DamageReducer += 0.1f;
+        }
+        else
+        {
+            throw new System.Exception("Max level reached");
+        }
+    }
+
+    public void UpgradeStatueHealth()
+    {
+        if (statueHealthLevel < maxLevel)
+        {
+            ++statueHealthLevel;
+            playerStats.StatueMaxHealth += 10;
+        }
+        else
+        {
+            throw new System.Exception("Max level reached");
+        }
+    }
+
+    public void UpgradeStatueRegen()
+    {
+        if (statueRegenLevel < maxLevel)
+        {
+            ++statueRegenLevel;
+            playerStats.StatueRegenerationRate += 0.2f;
+        }
+        else
+        {
+            throw new System.Exception("Max level reached");
+        }
+    }
+
+    public void UpgradeStatueDamageReduce()
+    {
+        if (statueDamageReducerLevel < maxLevel)
+        {
+            ++statueDamageReducerLevel;
+            playerStats.StatueDamageReducer += 0.1f;
+        }
+        else
+        {
+            throw new System.Exception("Max level reached");
+        }
+    }
+
+    public void UpgradeStatueFireRate()
+    {
+        if (statueFireRateLevel < maxLevel)
+        {
+            ++statueFireRateLevel;
+            playerStats.StatueFireRateMultiplier += 0.1f;
         }
         else
         {

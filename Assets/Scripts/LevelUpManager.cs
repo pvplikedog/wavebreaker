@@ -29,21 +29,20 @@ public class LevelUpManager : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private ItemsHandler itemsHandler;
     [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private InventoryManager inventoryManager;
 
     private void CheckForPossibleUpgrades()
     {
+        List<UpgradeOption> possibleUpgrades = new List<UpgradeOption>();
         foreach (UpgradeOption upgradeOption in upgradeOptions)
         {
-            if (upgradeOption.upgradeOptionSO.UpgradeType == UpgradeOptionSO.UpgradeOption.Heal)
+            if (IsPossibleUpgrade(upgradeOption))
             {
-                continue;
-            }
-            if (upgradeOption.upgradeOptionSO.MaxLvl == upgradeOption.CurrentLvl)
-            {
-                upgradeOptions.Remove(upgradeOption);
-                break;
+                possibleUpgrades.Add(upgradeOption);
             }
         }
+        upgradeOptions.Clear();
+        upgradeOptions = possibleUpgrades;
     }
     
     private UpgradeOption GetUpgradeOption()
@@ -129,6 +128,67 @@ public class LevelUpManager : MonoBehaviour
             case UpgradeOptionSO.UpgradeOption.damageReducePassive:
                 itemsHandler.AddOrUpgradeDamageReducerLevel(upgradeOption);
                 break;
+            case UpgradeOptionSO.UpgradeOption.StatueHealthPassive:
+                itemsHandler.AddOrUpgradeStatueHealthLevel(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.StatueRegenPassive:
+                itemsHandler.AddOrUpgradeStatueRegenLevel(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.StatueDamageReducePassive:
+                itemsHandler.AddOrUpgradeStatueDamageReduceLevel(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.StatueFireRatePassive:
+                itemsHandler.AddOrUpgradeStatueFireRateLevel(upgradeOption);
+                break;
+        }
+    }
+
+    private bool IsPossibleUpgrade(UpgradeOption upgradeOption)
+    {
+        if (upgradeOption.CurrentLvl == upgradeOption.upgradeOptionSO.MaxLvl) return false;
+        if (inventoryManager.currentPassiveIndex == 6 && IsPassiveUpgrade(upgradeOption.upgradeOptionSO) && upgradeOption.CurrentLvl == 0)
+        {
+            return false;
+        }
+        if (inventoryManager.currentWeaponIndex == 6 && IsWeaponUpgrade(upgradeOption.upgradeOptionSO) && upgradeOption.CurrentLvl == 0)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    private bool IsWeaponUpgrade(UpgradeOptionSO upgradeOption)
+    {
+        switch (upgradeOption.UpgradeType)
+        {
+            case UpgradeOptionSO.UpgradeOption.Gun:
+            case UpgradeOptionSO.UpgradeOption.HardGun:
+            case UpgradeOptionSO.UpgradeOption.MeleeCircle:
+            case UpgradeOptionSO.UpgradeOption.MeleeBox:
+            case UpgradeOptionSO.UpgradeOption.SkyFall:
+                return true;
+            default:
+                return false;
+        }
+    }
+    
+    private bool IsPassiveUpgrade(UpgradeOptionSO upgradeOption)
+    {
+        switch (upgradeOption.UpgradeType)
+        {
+            case UpgradeOptionSO.UpgradeOption.healthPassive:
+            case UpgradeOptionSO.UpgradeOption.regenPassive:
+            case UpgradeOptionSO.UpgradeOption.speedPassive:
+            case UpgradeOptionSO.UpgradeOption.damagePassive:
+            case UpgradeOptionSO.UpgradeOption.xpPassive:
+            case UpgradeOptionSO.UpgradeOption.damageReducePassive:
+            case UpgradeOptionSO.UpgradeOption.StatueHealthPassive:
+            case UpgradeOptionSO.UpgradeOption.StatueRegenPassive:
+            case UpgradeOptionSO.UpgradeOption.StatueDamageReducePassive:
+            case UpgradeOptionSO.UpgradeOption.StatueFireRatePassive:
+                return true;
+            default:
+                return false;
         }
     }
 }

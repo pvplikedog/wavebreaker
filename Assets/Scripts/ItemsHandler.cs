@@ -135,4 +135,44 @@ public class ItemsHandler : MonoBehaviour
 
         passiveUpgradeManager.UpgradeDamageReducer();
     }
+
+    public void AddOrUpgradeStatueHealthLevel(UpgradeOptionSO upgradeOption)
+    {
+        if (passiveUpgradeManager.statueHealthLevel == 0)
+        {
+            inventoryManager.AddPassive(upgradeOption);
+        }
+
+        passiveUpgradeManager.UpgradeStatueHealth();
+    }
+
+    public void AddOrUpgradeStatueRegenLevel(UpgradeOptionSO upgradeOption)
+    {
+        if (passiveUpgradeManager.statueRegenLevel == 0)
+        {
+            inventoryManager.AddPassive(upgradeOption);
+        }
+
+        passiveUpgradeManager.UpgradeStatueRegen();
+    }
+
+    public void AddOrUpgradeStatueDamageReduceLevel(UpgradeOptionSO upgradeOption)
+    {
+        if (passiveUpgradeManager.statueDamageReducerLevel == 0)
+        {
+            inventoryManager.AddPassive(upgradeOption);
+        }
+
+        passiveUpgradeManager.UpgradeStatueDamageReduce();
+    }
+
+    public void AddOrUpgradeStatueFireRateLevel(UpgradeOptionSO upgradeOption)
+    {
+        if (passiveUpgradeManager.statueFireRateLevel == 0)
+        {
+            inventoryManager.AddPassive(upgradeOption);
+        }
+
+        passiveUpgradeManager.UpgradeStatueFireRate();
+    }
 }

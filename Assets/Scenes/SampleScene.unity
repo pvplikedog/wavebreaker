@@ -5296,6 +5296,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909165494}
   m_CullTransparentMesh: 1
+--- !u!1001 &926939827
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4013314106218346579, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.7641716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013314106218346579, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.0968957
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013314106218346579, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.04846101
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013314106218346579, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013314106218346579, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013314106218346579, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013314106218346579, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013314106218346579, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013314106218346579, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013314106218346579, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556886164564211338, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: m_Name
+      value: small xp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976165247563930002, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
+      propertyPath: worth
+      value: 1e+9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7bf5ce37477b42c88dac20367a04461, type: 3}
 --- !u!1001 &957959115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7014,9 +7075,18 @@ MonoBehaviour:
     upgradeOptionSO: {fileID: 11400000, guid: 082aaf736269e42aeb5c5854ea3d700e, type: 2}
   - CurrentLvl: 0
     upgradeOptionSO: {fileID: 11400000, guid: 4216b7306356643ea82eb5721e289a79, type: 2}
+  - CurrentLvl: 0
+    upgradeOptionSO: {fileID: 11400000, guid: 456e6f7ca41a040d098f62dca2afec86, type: 2}
+  - CurrentLvl: 0
+    upgradeOptionSO: {fileID: 11400000, guid: f5a7c2ddeeaa04c508370dab77379831, type: 2}
+  - CurrentLvl: 0
+    upgradeOptionSO: {fileID: 11400000, guid: fb20f3add79114d448c2f3bceb38751f, type: 2}
+  - CurrentLvl: 0
+    upgradeOptionSO: {fileID: 11400000, guid: 1e1c6918662a74731a4a8263cb276165, type: 2}
   gameManager: {fileID: 1203025360}
   itemsHandler: {fileID: 1203025358}
   playerHealth: {fileID: 1231674114}
+  inventoryManager: {fileID: 1203025359}
 --- !u!114 &1203025362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7036,6 +7106,10 @@ MonoBehaviour:
   damageLevel: 0
   xpLevel: 0
   damageReducerLevel: 0
+  statueHealthLevel: 0
+  statueRegenLevel: 0
+  statueFireRateLevel: 0
+  statueDamageReducerLevel: 0
 --- !u!114 &1203025363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7055,8 +7129,9 @@ MonoBehaviour:
   XPMultiplier: 1
   DamageReducer: 0
   StatueMaxHealth: 100
-  StatueRegenerationRate: 0
+  StatueRegenerationRate: 0.5
   StatueDamageReducer: 0
+  StatueFireRateMultiplier: 1
 --- !u!1 &1231674109
 GameObject:
   m_ObjectHideFlags: 0
@@ -9748,7 +9823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8500170568798312704, guid: 40a47e2a7b81943bfbe0191cfccb93ff, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13093,3 +13168,4 @@ SceneRoots:
   - {fileID: 1670258248}
   - {fileID: 1841009628}
   - {fileID: 548523591}
+  - {fileID: 926939827}

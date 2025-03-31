@@ -22,7 +22,7 @@ public class StatueHealth : MonoBehaviour
     {
         if (_healCountdown <= 0f)
         {
-            Heal(PlayerStats.instance.RegenerationRate);
+            Heal(PlayerStats.instance.StatueRegenerationRate);
             _healCountdown = 1f;
         }
       

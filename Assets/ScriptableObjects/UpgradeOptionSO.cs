@@ -19,7 +19,11 @@ public class UpgradeOptionSO : ScriptableObject
         speedPassive,
         damagePassive,
         xpPassive,
-        damageReducePassive
+        damageReducePassive,
+        StatueHealthPassive,
+        StatueRegenPassive,
+        StatueDamageReducePassive,
+        StatueFireRatePassive,
     }
     
     public Sprite Icon;
