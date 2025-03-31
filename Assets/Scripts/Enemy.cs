@@ -13,8 +13,10 @@ public class Enemy : MonoBehaviour
     private CircleCollider2D _collider;
     
     private bool _isPlayerInRange;
+    private bool _isStatueInRange;
 
     private PlayerHealth _playerHealth;
+    private StatueHealth _statueHealth;
     
     [Header("Loot")]
     public List<LootItem> lootItems = new List<LootItem>();
@@ -27,11 +29,11 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (_isPlayerInRange)
+        if (_isPlayerInRange || _isStatueInRange)
         {
             if (_damageCountdown < 0f)
             {
-                DamagePlayer();
+                DoDamage();
                 _damageCountdown = 1f / damageRate;
             }
 
@@ -85,6 +87,11 @@ public class Enemy : MonoBehaviour
             _isPlayerInRange = true;
             _playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
         }
+        if (collision.gameObject.CompareTag("Statue"))
+        {
+            _isStatueInRange = true;
+            _statueHealth = collision.gameObject.GetComponent<StatueHealth>();
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -93,14 +100,22 @@ public class Enemy : MonoBehaviour
         {
             _isPlayerInRange = false;
         }
+        if (collision.gameObject.CompareTag("Statue"))
+        {
+            _isStatueInRange = false;
+        }
     }
 
-    private void DamagePlayer()
+    private void DoDamage()
     {
-        Debug.Log("Damage");
-        if (_playerHealth)
+        if (_playerHealth && _isPlayerInRange)
         {
             _playerHealth.TakeDamage(damage);
+        }
+        
+        if (_statueHealth && _isStatueInRange)
+        {
+            _statueHealth.TakeDamage(damage);
         }
     }
 }

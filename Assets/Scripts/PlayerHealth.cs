@@ -19,10 +19,14 @@ public class PlayerHealth : MonoBehaviour
     private void Awake()
     {
         HealthItem.OnHealthItemCollect += Heal;
-        _currentHealth = PlayerStats.instance.MaxHealth;
         _collider = GetComponent<CircleCollider2D>();
         _playerMovement = GetComponent<PlayerMovement>();
         _playerCanvas = GetComponentInChildren<Canvas>();
+    }
+
+    private void Start()
+    {
+        _currentHealth = PlayerStats.instance.MaxHealth;
     }
 
     private float _healCountdown = 0;
@@ -65,22 +69,27 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!gameManager.IsGameOver)
         {
-            Invoke("GameOver", 1.5f);
+            GameOver();
             //gameManager.GameOver();
         }
         gameObject.tag = "Untagged";
         _collider.enabled = false;
         playerAnimator.PlayDeathAnimation();
-        _playerMovement.enabled = false;
         _playerCanvas.enabled = false;
         Destroy(gameObject, 2f);
         //Time.timeScale = 0;
     }
 
-    private void GameOver()
+    public void GameOver()
     {
+        _playerMovement.enabled = false;
         gameManager.AssignLevelReached(levelManager.GetCurrentLevel());
         gameManager.AssignChoosenWeaponsAndPassives(inventoryManager.weaponUISlots, inventoryManager.currentWeaponIndex, inventoryManager.passiveUISlots, inventoryManager.currentPassiveIndex);
+        Invoke("GameOverWithDelay", 1.5f);
+    }
+
+    private void GameOverWithDelay()
+    {
         gameManager.GameOver();
     }
 }

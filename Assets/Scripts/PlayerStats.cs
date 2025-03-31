@@ -10,6 +10,10 @@ public class PlayerStats : MonoBehaviour
     public float DamageMultiplier = 1f;
     public float XPMultiplier = 1f;
     public float DamageReducer = 0f;
+    
+    public float StatueMaxHealth = 100f;
+    public float StatueRegenerationRate = 0f;
+    public float StatueDamageReducer = 0f;
 
     private void Awake()
     {
