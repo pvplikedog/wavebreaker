@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -35,12 +37,20 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private LevelUpManager levelUpManager;
 
+    [Header("Damage Text Settings")] 
+    public Canvas damageTextCanvas;
+    public float textFontSize = 20f;
+    public TMP_FontAsset textFont;
+    public Camera referenceCamera;
+    
+
 
     [HideInInspector] public int levelsToUpdate;
     private float stopwatchTime;
 
     private void Awake()
     {
+        Instance = this;
         DisableScreen();
     }
 
@@ -200,5 +210,62 @@ public class GameManager : MonoBehaviour
     private void CheckIfShouldLvlUp()
     {
         if (levelsToUpdate > 0) ChangeState(GameState.LevelUp);
+    }
+    
+    public static GameManager Instance { get; private set; }
+    
+    IEnumerator GenerateFloatingTextCoroutine(string text, Transform target, float duration = 1f, float speed = 50f)
+    {
+        GameObject textObject = new GameObject("Damage Floating Text");
+        RectTransform rect = textObject.AddComponent<RectTransform>();
+        TextMeshProUGUI tmPro = textObject.AddComponent<TextMeshProUGUI>();
+        tmPro.text = text;
+        tmPro.horizontalAlignment = HorizontalAlignmentOptions.Center;
+        tmPro.verticalAlignment = VerticalAlignmentOptions.Middle;
+        tmPro.fontSize = textFontSize;
+        if (textFont) tmPro.font = textFont;
+        rect.position = referenceCamera.WorldToScreenPoint(target.position);
+        
+        Destroy(textObject, duration);
+        
+        textObject.transform.SetParent(Instance.damageTextCanvas.transform);
+        
+        WaitForEndOfFrame waitForEndOfFrame = new WaitForEndOfFrame();
+        float t = 0;
+        float yOffset = 0;
+        while (t < duration)
+        {
+            if (!textObject)
+            {
+                break;
+            }
+            tmPro.color = new Color(tmPro.color.r, tmPro.color.g, tmPro.color.b, 1 - t / duration);
+            
+            if(target) {
+                yOffset += speed * Time.deltaTime;
+                rect.position = referenceCamera.WorldToScreenPoint(target.position + new Vector3(0,yOffset));
+            } else {
+                // If target is dead, just pan up where the text is at.
+                rect.position += new Vector3(0, speed * Time.deltaTime, 0);
+            }
+            
+            yield return waitForEndOfFrame;
+            t += Time.deltaTime;
+        }
+    }
+
+    public static void GenerateFloatingText(string text, Transform target, float duration = 1f, float speed = 1f)
+    {
+        if (!Instance.damageTextCanvas)
+        {
+            return;
+        }
+
+        if (!Instance.referenceCamera)
+        {
+            Instance.referenceCamera = Camera.main;
+        }
+        
+        Instance.StartCoroutine(Instance.GenerateFloatingTextCoroutine(text, target, duration, speed));
     }
 }

@@ -85,6 +85,10 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (damage > 0)
+        {
+            GameManager.GenerateFloatingText(Mathf.RoundToInt(damage).ToString(), transform);
+        }
         health -= damage * PlayerStats.instance.DamageMultiplier;
         _enemyGfx.PlayTakeDamgeAnimation();
         if (health <= 0) Die();
