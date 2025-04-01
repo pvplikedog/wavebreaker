@@ -1,5 +1,5 @@
-using UnityEngine;
 using Pathfinding;
+using UnityEngine;
 
 public class EnemyGFX : MonoBehaviour
 {
@@ -7,25 +7,20 @@ public class EnemyGFX : MonoBehaviour
     private const string IS_DEAD = "IsDead";
 
     [SerializeField] private Animator animator;
-    
+
     private AIPath aiPath;
-    
-    void Awake()
+
+    private void Awake()
     {
         aiPath = GetComponent<AIPath>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (aiPath.desiredVelocity.x >= 0.01f)
-        {
             transform.localScale = new Vector3(1f, 1f, 1f);
-        }
-        else if (aiPath.desiredVelocity.x <= -0.01f)
-        {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        }
+        else if (aiPath.desiredVelocity.x <= -0.01f) transform.localScale = new Vector3(-1f, 1f, 1f);
     }
 
     public void PlayTakeDamgeAnimation()

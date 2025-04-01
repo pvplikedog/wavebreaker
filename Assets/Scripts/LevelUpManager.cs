@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,87 +8,113 @@ using Random = UnityEngine.Random;
 
 public class LevelUpManager : MonoBehaviour
 {
-    [Serializable]
-    public class UpgradeUI
-    {
-        public TMP_Text upgradeName;
-        public TMP_Text upgradeDescription;
-        public Image upgradeIcon;
-        public Button upgradeButton;
-    }
+    public List<UpgradeUI> upgradeUIOptions = new();
+    public List<UpgradeOption> upgradeOptions = new();
 
-    [Serializable]
-    public class UpgradeOption
-    {
-        public int CurrentLvl;
-        public UpgradeOptionSO upgradeOptionSO;
-    }
-    
-    public List<UpgradeUI> upgradeUIOptions = new List<UpgradeUI>();
-    public List<UpgradeOption> upgradeOptions = new List<UpgradeOption>();
-    
     [SerializeField] private GameManager gameManager;
     [SerializeField] private ItemsHandler itemsHandler;
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private InventoryManager inventoryManager;
 
-    private void CheckForPossibleUpgrades()
+    // For first usage:
+    private List<UpgradeOption> firstUpgradeOptions = new();
+    private bool isFirst = true;
+
+    private void Start()
     {
-        List<UpgradeOption> possibleUpgrades = new List<UpgradeOption>();
-        foreach (UpgradeOption upgradeOption in upgradeOptions)
+        foreach (var upgradeOption in upgradeOptions)
         {
-            if (IsPossibleUpgrade(upgradeOption))
+            if (IsWeaponUpgrade(upgradeOption.upgradeOptionSO))
             {
-                possibleUpgrades.Add(upgradeOption);
+                firstUpgradeOptions.Add(upgradeOption);
             }
         }
+    }
+
+    private void CheckForPossibleUpgrades()
+    {
+        var possibleUpgrades = new List<UpgradeOption>();
+        foreach (var upgradeOption in upgradeOptions)
+            if (IsPossibleUpgrade(upgradeOption))
+                possibleUpgrades.Add(upgradeOption);
+
         upgradeOptions.Clear();
         upgradeOptions = possibleUpgrades;
     }
-    
-    private UpgradeOption GetUpgradeOption()
+
+    private List<UpgradeOption> GetUpgradeOptions(List<UpgradeOption> upgradeOptions_)
     {
-        if (upgradeOptions.Count == 0)
+        if (upgradeOptions_.Count == 0) return null;
+
+        var possibleUpgrades = new List<UpgradeOption>();
+
+        if (upgradeOptions_.Count <= 4)
         {
-            return null;
+            // We always will choose it, but I want it to be last.
+            var healUpgradeOption = upgradeOptions_[0];
+            foreach (var upgradeOption in upgradeOptions_)
+                if (upgradeOption.upgradeOptionSO.UpgradeType == UpgradeOptionSO.UpgradeOption.Heal)
+                    healUpgradeOption = upgradeOption;
+                else
+                    possibleUpgrades.Add(upgradeOption);
+
+            for (var i = 0; i < 4 - upgradeOptions_.Count + 1; i++) possibleUpgrades.Add(healUpgradeOption);
         }
-        return upgradeOptions[Random.Range(0, upgradeOptions.Count)];
+        else
+        {
+            // Not sure about it.
+            possibleUpgrades = upgradeOptions_.OrderBy(x => Random.Range(0, int.MaxValue)).Take(4).ToList();
+        }
+
+        return possibleUpgrades;
     }
-    
+
     private void ApplyUpgrade(UpgradeOption upgrade)
     {
-        if (upgrade.CurrentLvl < upgrade.upgradeOptionSO.MaxLvl || upgrade.upgradeOptionSO.UpgradeType == UpgradeOptionSO.UpgradeOption.Heal)
+        if (upgrade.CurrentLvl < upgrade.upgradeOptionSO.MaxLvl ||
+            upgrade.upgradeOptionSO.UpgradeType == UpgradeOptionSO.UpgradeOption.Heal)
         {
-            if (upgrade.upgradeOptionSO.UpgradeType != UpgradeOptionSO.UpgradeOption.Heal)
-            {
-                upgrade.CurrentLvl++;
-            }
+            if (upgrade.upgradeOptionSO.UpgradeType != UpgradeOptionSO.UpgradeOption.Heal) upgrade.CurrentLvl++;
             ChooseUpgrade(upgrade.upgradeOptionSO);
         }
         else
         {
             Debug.Log("Upgrade is already at max level.");
         }
+
         gameManager.EndLevelUp();
     }
 
     public void ConfigureUpgradeUI()
     {
         CheckForPossibleUpgrades();
-        foreach (UpgradeUI upgradeUI in upgradeUIOptions)
+        var currentOption = 0;
+        var upgradeOptions_ = new List<UpgradeOption>();
+        if (isFirst)
         {
-            UpgradeOption upgradeOption = GetUpgradeOption();
+            isFirst = false;
+            upgradeOptions_ = GetUpgradeOptions(firstUpgradeOptions);
+        }
+        else
+        {
+            upgradeOptions_ = GetUpgradeOptions(upgradeOptions);
+        }
+        foreach (var upgradeUI in upgradeUIOptions)
+        {
+            var upgradeOption = upgradeOptions_[currentOption];
+            currentOption++;
             if (upgradeOption.upgradeOptionSO)
             {
                 upgradeUI.upgradeName.text = upgradeOption.upgradeOptionSO.Names[upgradeOption.CurrentLvl];
-                upgradeUI.upgradeDescription.text = upgradeOption.upgradeOptionSO.Descriptions[upgradeOption.CurrentLvl];
+                upgradeUI.upgradeDescription.text =
+                    upgradeOption.upgradeOptionSO.Descriptions[upgradeOption.CurrentLvl];
                 upgradeUI.upgradeIcon.sprite = upgradeOption.upgradeOptionSO.Icon;
                 upgradeUI.upgradeButton.onClick.RemoveAllListeners();
                 upgradeUI.upgradeButton.onClick.AddListener(() => ApplyUpgrade(upgradeOption));
             }
         }
     }
-    
+
     private void ChooseUpgrade(UpgradeOptionSO upgradeOption)
     {
         switch (upgradeOption.UpgradeType)
@@ -146,14 +173,10 @@ public class LevelUpManager : MonoBehaviour
     private bool IsPossibleUpgrade(UpgradeOption upgradeOption)
     {
         if (upgradeOption.CurrentLvl == upgradeOption.upgradeOptionSO.MaxLvl) return false;
-        if (inventoryManager.currentPassiveIndex == 6 && IsPassiveUpgrade(upgradeOption.upgradeOptionSO) && upgradeOption.CurrentLvl == 0)
-        {
-            return false;
-        }
-        if (inventoryManager.currentWeaponIndex == 6 && IsWeaponUpgrade(upgradeOption.upgradeOptionSO) && upgradeOption.CurrentLvl == 0)
-        {
-            return false;
-        }
+        if (inventoryManager.currentPassiveIndex == 6 && IsPassiveUpgrade(upgradeOption.upgradeOptionSO) &&
+            upgradeOption.CurrentLvl == 0) return false;
+        if (inventoryManager.currentWeaponIndex == 6 && IsWeaponUpgrade(upgradeOption.upgradeOptionSO) &&
+            upgradeOption.CurrentLvl == 0) return false;
         return true;
     }
 
@@ -171,7 +194,7 @@ public class LevelUpManager : MonoBehaviour
                 return false;
         }
     }
-    
+
     private bool IsPassiveUpgrade(UpgradeOptionSO upgradeOption)
     {
         switch (upgradeOption.UpgradeType)
@@ -190,5 +213,21 @@ public class LevelUpManager : MonoBehaviour
             default:
                 return false;
         }
+    }
+
+    [Serializable]
+    public class UpgradeUI
+    {
+        public TMP_Text upgradeName;
+        public TMP_Text upgradeDescription;
+        public Image upgradeIcon;
+        public Button upgradeButton;
+    }
+
+    [Serializable]
+    public class UpgradeOption
+    {
+        public int CurrentLvl;
+        public UpgradeOptionSO upgradeOptionSO;
     }
 }

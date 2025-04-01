@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class SkyFallWeapon : Weapon
 {
@@ -11,26 +10,23 @@ public class SkyFallWeapon : Weapon
     [SerializeField] private float circleFireRate;
     [SerializeField] private float circleRadius;
     [SerializeField] private Transform attackPoint;
-    
-    void Update()
+
+    private void Update()
     {
         if (_fireCountdown <= 0f)
         {
-            for (int i = 0; i < circlesAmount; i++)
-            {
-                SpawnCircle();
-            }
+            for (var i = 0; i < circlesAmount; i++) SpawnCircle();
             _fireCountdown = 1f / fireRate;
         }
-      
+
         _fireCountdown -= Time.deltaTime;
     }
 
     private void SpawnCircle()
     {
-        GameObject circle  = Instantiate(circlePrefab);
+        var circle = Instantiate(circlePrefab);
         circle.GetComponent<CircleProjectile>().Setup(circleFireRate, circleRadius, damage);
-        Vector2 randomInCircle = Random.insideUnitCircle * attackRange;
+        var randomInCircle = Random.insideUnitCircle * attackRange;
         circle.transform.position = attackPoint.position + new Vector3(randomInCircle.x, randomInCircle.y, 0);
         Destroy(circle, timeLast);
     }

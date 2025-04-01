@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-
     private const string IS_WAKING = "IsWalking";
     private const string IS_DEAD = "IsDead";
 
@@ -19,7 +18,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         animator.SetBool(IS_WAKING, playerMovement.IsWalking());
     }
-    
+
     public void PlayDeathAnimation()
     {
         animator.SetTrigger(IS_DEAD);

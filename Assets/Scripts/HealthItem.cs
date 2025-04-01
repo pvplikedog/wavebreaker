@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class HealthItem : MonoBehaviour, ICollectable
 {
-    public static event Action<float> OnHealthItemCollect;
     [SerializeField] private float worth;
 
     public void Collect()
@@ -11,4 +10,6 @@ public class HealthItem : MonoBehaviour, ICollectable
         OnHealthItemCollect?.Invoke(worth);
         Destroy(gameObject);
     }
+
+    public static event Action<float> OnHealthItemCollect;
 }

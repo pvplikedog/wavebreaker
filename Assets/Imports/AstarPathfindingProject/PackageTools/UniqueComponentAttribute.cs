@@ -1,6 +1,10 @@
-namespace Pathfinding {
-	[System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple = true)]
-	public class UniqueComponentAttribute : System.Attribute {
-		public string tag;
-	}
+using System;
+
+namespace Pathfinding
+{
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+    public class UniqueComponentAttribute : Attribute
+    {
+        public string tag;
+    }
 }

@@ -1,22 +1,25 @@
+using System;
 using UnityEngine;
 
 public class PassiveUpgradeManager : MonoBehaviour
 {
     [SerializeField] private PlayerStats playerStats;
-    
-    [HideInInspector] public int healthLevel = 0;
-    [HideInInspector] public int regenerationLevel = 0;
-    [HideInInspector] public int speedLevel = 0;
-    [HideInInspector] public int damageLevel = 0;
-    [HideInInspector] public int xpLevel = 0;
-    [HideInInspector] public int damageReducerLevel = 0;
+
+    [HideInInspector] public int healthLevel;
+    [HideInInspector] public int regenerationLevel;
+    [HideInInspector] public int speedLevel;
+    [HideInInspector] public int damageLevel;
+    [HideInInspector] public int xpLevel;
+
+    [HideInInspector] public int damageReducerLevel;
+
     // Statue:
-    [HideInInspector] public int statueHealthLevel = 0;
-    [HideInInspector] public int statueRegenLevel = 0;
-    [HideInInspector] public int statueFireRateLevel = 0;
-    [HideInInspector] public int statueDamageReducerLevel = 0;
-    
-    private int maxLevel = 5;
+    [HideInInspector] public int statueHealthLevel;
+    [HideInInspector] public int statueRegenLevel;
+    [HideInInspector] public int statueFireRateLevel;
+    [HideInInspector] public int statueDamageReducerLevel;
+
+    private readonly int maxLevel = 5;
 
     public void UpgradeHealth()
     {
@@ -27,10 +30,10 @@ public class PassiveUpgradeManager : MonoBehaviour
         }
         else
         {
-            throw new System.Exception("Max level reached");
+            throw new Exception("Max level reached");
         }
     }
-    
+
     public void UpgradeRegeneration()
     {
         if (regenerationLevel < maxLevel)
@@ -40,10 +43,10 @@ public class PassiveUpgradeManager : MonoBehaviour
         }
         else
         {
-            throw new System.Exception("Max level reached");
+            throw new Exception("Max level reached");
         }
     }
-    
+
     public void UpgradeSpeed()
     {
         if (speedLevel < maxLevel)
@@ -53,10 +56,10 @@ public class PassiveUpgradeManager : MonoBehaviour
         }
         else
         {
-            throw new System.Exception("Max level reached");
+            throw new Exception("Max level reached");
         }
     }
-    
+
     public void UpgradeDamage()
     {
         if (damageLevel < maxLevel)
@@ -66,10 +69,10 @@ public class PassiveUpgradeManager : MonoBehaviour
         }
         else
         {
-            throw new System.Exception("Max level reached");
+            throw new Exception("Max level reached");
         }
     }
-    
+
     public void UpgradeXP()
     {
         if (xpLevel < maxLevel)
@@ -79,10 +82,10 @@ public class PassiveUpgradeManager : MonoBehaviour
         }
         else
         {
-            throw new System.Exception("Max level reached");
+            throw new Exception("Max level reached");
         }
     }
-    
+
     public void UpgradeDamageReducer()
     {
         if (damageReducerLevel < maxLevel)
@@ -92,7 +95,7 @@ public class PassiveUpgradeManager : MonoBehaviour
         }
         else
         {
-            throw new System.Exception("Max level reached");
+            throw new Exception("Max level reached");
         }
     }
 
@@ -105,7 +108,7 @@ public class PassiveUpgradeManager : MonoBehaviour
         }
         else
         {
-            throw new System.Exception("Max level reached");
+            throw new Exception("Max level reached");
         }
     }
 
@@ -118,7 +121,7 @@ public class PassiveUpgradeManager : MonoBehaviour
         }
         else
         {
-            throw new System.Exception("Max level reached");
+            throw new Exception("Max level reached");
         }
     }
 
@@ -131,7 +134,7 @@ public class PassiveUpgradeManager : MonoBehaviour
         }
         else
         {
-            throw new System.Exception("Max level reached");
+            throw new Exception("Max level reached");
         }
     }
 
@@ -144,7 +147,7 @@ public class PassiveUpgradeManager : MonoBehaviour
         }
         else
         {
-            throw new System.Exception("Max level reached");
+            throw new Exception("Max level reached");
         }
     }
 }

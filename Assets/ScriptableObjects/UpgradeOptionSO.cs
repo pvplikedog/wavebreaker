@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "UpgradeOptionSO", menuName = "Scriptable Objects/UpgradeOptionSO")]
 public class UpgradeOptionSO : ScriptableObject
@@ -23,12 +21,12 @@ public class UpgradeOptionSO : ScriptableObject
         StatueHealthPassive,
         StatueRegenPassive,
         StatueDamageReducePassive,
-        StatueFireRatePassive,
+        StatueFireRatePassive
     }
-    
+
     public Sprite Icon;
     public UpgradeOption UpgradeType;
     public int MaxLvl;
-    public List<String> Names;
-    public List<String> Descriptions;
+    public List<string> Names;
+    public List<string> Descriptions;
 }

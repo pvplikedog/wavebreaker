@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,14 +5,14 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private float XPToNextLvl = 3f;
-    private float _curXP = 0f;
-    private int _curLvl = 1;
-    
+
     [SerializeField] private Image levelBar;
     [SerializeField] private TMP_Text levelText;
 
     [SerializeField] private GameManager gameManager;
-    
+    private int _curLvl = 1;
+    private float _curXP;
+
     private void Start()
     {
         Exp.OnExpCollect += IncreaseXP;
@@ -22,7 +21,7 @@ public class LevelManager : MonoBehaviour
     private void IncreaseXP(float amount)
     {
         _curXP += amount * PlayerStats.instance.XPMultiplier;
-        int levelsToUp = 0;
+        var levelsToUp = 0;
         while (_curXP >= XPToNextLvl && !gameManager.ChoosingUpgrade)
         {
             // Debug.Log("LVL UP");
@@ -32,12 +31,9 @@ public class LevelManager : MonoBehaviour
             XPToNextLvl *= 1.2f;
             levelsToUp++;
         }
-        levelBar.fillAmount = _curXP / XPToNextLvl;
-        if (levelsToUp > 0)
-        {
-            gameManager.StartLevelUp(levelsToUp);
-        }
 
+        levelBar.fillAmount = _curXP / XPToNextLvl;
+        if (levelsToUp > 0) gameManager.StartLevelUp(levelsToUp);
     }
 
     public int GetCurrentLevel()

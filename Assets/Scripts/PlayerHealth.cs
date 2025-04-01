@@ -1,21 +1,22 @@
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Serialization;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private float _currentHealth;
     [SerializeField] private PlayerAnimator playerAnimator;
-    private CircleCollider2D _collider;
-    private PlayerMovement _playerMovement;
-    private Canvas _playerCanvas;
 
     [SerializeField] private Image healthBar;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private LevelManager levelManager;
     [SerializeField] private InventoryManager inventoryManager;
-    
+    private CircleCollider2D _collider;
+    private float _currentHealth;
+
+    private float _healCountdown;
+    private Canvas _playerCanvas;
+    private PlayerMovement _playerMovement;
+
     private void Awake()
     {
         HealthItem.OnHealthItemCollect += Heal;
@@ -29,7 +30,6 @@ public class PlayerHealth : MonoBehaviour
         _currentHealth = PlayerStats.instance.MaxHealth;
     }
 
-    private float _healCountdown = 0;
     private void Update()
     {
         // Heals each second.
@@ -38,20 +38,17 @@ public class PlayerHealth : MonoBehaviour
             Heal(PlayerStats.instance.RegenerationRate);
             _healCountdown = 1f;
         }
-      
+
         _healCountdown -= Time.deltaTime;
     }
-    
+
     public void TakeDamage(float damage)
     {
         _currentHealth -= damage * (1 - PlayerStats.instance.DamageReducer);
-        
+
         UpdateHealthBar();
-        
-        if (_currentHealth <= 0)
-        {
-            Die();
-        }
+
+        if (_currentHealth <= 0) Die();
     }
 
     public void Heal(float heal)
@@ -64,14 +61,11 @@ public class PlayerHealth : MonoBehaviour
     {
         healthBar.fillAmount = _currentHealth / PlayerStats.instance.MaxHealth;
     }
-    
+
     private void Die()
     {
-        if (!gameManager.IsGameOver)
-        {
-            GameOver();
-            //gameManager.GameOver();
-        }
+        if (!gameManager.IsGameOver) GameOver();
+        //gameManager.GameOver();
         gameObject.tag = "Untagged";
         _collider.enabled = false;
         playerAnimator.PlayDeathAnimation();
@@ -84,7 +78,8 @@ public class PlayerHealth : MonoBehaviour
     {
         _playerMovement.enabled = false;
         gameManager.AssignLevelReached(levelManager.GetCurrentLevel());
-        gameManager.AssignChoosenWeaponsAndPassives(inventoryManager.weaponUISlots, inventoryManager.currentWeaponIndex, inventoryManager.passiveUISlots, inventoryManager.currentPassiveIndex);
+        gameManager.AssignChoosenWeaponsAndPassives(inventoryManager.weaponUISlots, inventoryManager.currentWeaponIndex,
+            inventoryManager.passiveUISlots, inventoryManager.currentPassiveIndex);
         Invoke("GameOverWithDelay", 1.5f);
     }
 

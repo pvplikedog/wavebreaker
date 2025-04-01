@@ -1,17 +1,10 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GunBullet : MonoBehaviour
 {
-    private Transform target;
-
     [SerializeField] private float speed = 30f;
     [SerializeField] private float damage = 5f;
-
-    public void Seek(Transform target)
-    {
-        this.target = target;
-    }
+    private Transform target;
 
     private void Update()
     {
@@ -20,17 +13,22 @@ public class GunBullet : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
-        Vector3 dir = target.position - transform.position;
-        float distanceThisFrame = speed * Time.deltaTime;
+
+        var dir = target.position - transform.position;
+        var distanceThisFrame = speed * Time.deltaTime;
 
         if (dir.magnitude <= distanceThisFrame)
         {
             HitTarget();
             return;
         }
-        
+
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+    }
+
+    public void Seek(Transform target)
+    {
+        this.target = target;
     }
 
     private void HitTarget()

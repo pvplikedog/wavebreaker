@@ -78,100 +78,70 @@ public class ItemsHandler : MonoBehaviour
 
     public void AddOrUpgradeHealthLevel(UpgradeOptionSO upgradeOptionSO)
     {
-        if (passiveUpgradeManager.healthLevel == 0)
-        {
-            inventoryManager.AddPassive(upgradeOptionSO);
-        }
+        if (passiveUpgradeManager.healthLevel == 0) inventoryManager.AddPassive(upgradeOptionSO);
 
         passiveUpgradeManager.UpgradeHealth();
     }
 
     public void AddOrUpgradeRegenerationLevel(UpgradeOptionSO upgradeOptionSO)
     {
-        if (passiveUpgradeManager.regenerationLevel == 0)
-        {
-            inventoryManager.AddPassive(upgradeOptionSO);
-        }
+        if (passiveUpgradeManager.regenerationLevel == 0) inventoryManager.AddPassive(upgradeOptionSO);
 
         passiveUpgradeManager.UpgradeRegeneration();
     }
 
     public void AddOrUpgradeSpeedLevel(UpgradeOptionSO upgradeOptionSO)
     {
-        if (passiveUpgradeManager.speedLevel == 0)
-        {
-            inventoryManager.AddPassive(upgradeOptionSO);
-        }
+        if (passiveUpgradeManager.speedLevel == 0) inventoryManager.AddPassive(upgradeOptionSO);
 
         passiveUpgradeManager.UpgradeSpeed();
     }
 
     public void AddOrUpgradeDamageLevel(UpgradeOptionSO upgradeOptionSO)
     {
-        if (passiveUpgradeManager.damageLevel == 0)
-        {
-            inventoryManager.AddPassive(upgradeOptionSO);
-        }
+        if (passiveUpgradeManager.damageLevel == 0) inventoryManager.AddPassive(upgradeOptionSO);
 
         passiveUpgradeManager.UpgradeDamage();
     }
 
     public void AddOrUpgradeXPLevel(UpgradeOptionSO upgradeOptionSO)
     {
-        if (passiveUpgradeManager.xpLevel == 0)
-        {
-            inventoryManager.AddPassive(upgradeOptionSO);
-        }
+        if (passiveUpgradeManager.xpLevel == 0) inventoryManager.AddPassive(upgradeOptionSO);
 
         passiveUpgradeManager.UpgradeXP();
     }
 
     public void AddOrUpgradeDamageReducerLevel(UpgradeOptionSO upgradeOptionSO)
     {
-        if (passiveUpgradeManager.damageReducerLevel == 0)
-        {
-            inventoryManager.AddPassive(upgradeOptionSO);
-        }
+        if (passiveUpgradeManager.damageReducerLevel == 0) inventoryManager.AddPassive(upgradeOptionSO);
 
         passiveUpgradeManager.UpgradeDamageReducer();
     }
 
     public void AddOrUpgradeStatueHealthLevel(UpgradeOptionSO upgradeOption)
     {
-        if (passiveUpgradeManager.statueHealthLevel == 0)
-        {
-            inventoryManager.AddPassive(upgradeOption);
-        }
+        if (passiveUpgradeManager.statueHealthLevel == 0) inventoryManager.AddPassive(upgradeOption);
 
         passiveUpgradeManager.UpgradeStatueHealth();
     }
 
     public void AddOrUpgradeStatueRegenLevel(UpgradeOptionSO upgradeOption)
     {
-        if (passiveUpgradeManager.statueRegenLevel == 0)
-        {
-            inventoryManager.AddPassive(upgradeOption);
-        }
+        if (passiveUpgradeManager.statueRegenLevel == 0) inventoryManager.AddPassive(upgradeOption);
 
         passiveUpgradeManager.UpgradeStatueRegen();
     }
 
     public void AddOrUpgradeStatueDamageReduceLevel(UpgradeOptionSO upgradeOption)
     {
-        if (passiveUpgradeManager.statueDamageReducerLevel == 0)
-        {
-            inventoryManager.AddPassive(upgradeOption);
-        }
+        if (passiveUpgradeManager.statueDamageReducerLevel == 0) inventoryManager.AddPassive(upgradeOption);
 
         passiveUpgradeManager.UpgradeStatueDamageReduce();
     }
 
     public void AddOrUpgradeStatueFireRateLevel(UpgradeOptionSO upgradeOption)
     {
-        if (passiveUpgradeManager.statueFireRateLevel == 0)
-        {
-            inventoryManager.AddPassive(upgradeOption);
-        }
+        if (passiveUpgradeManager.statueFireRateLevel == 0) inventoryManager.AddPassive(upgradeOption);
 
         passiveUpgradeManager.UpgradeStatueFireRate();
     }

@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-[System.Serializable]
+[Serializable]
 public class LootItem
 {
     public GameObject itemPrefab;

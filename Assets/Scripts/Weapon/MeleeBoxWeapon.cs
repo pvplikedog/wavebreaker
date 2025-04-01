@@ -3,44 +3,40 @@ using UnityEngine;
 public class MeleeBoxWeapon : Weapon
 {
     [SerializeField] private float damage = 10f;
-    
-    [Header("Box settings")]
-    [SerializeField] float boxWidth;
-    [SerializeField] float boxHeight;
+
+    [Header("Box settings")] [SerializeField]
+    private float boxWidth;
+
+    [SerializeField] private float boxHeight;
     [SerializeField] private Transform boxMidPoint;
     [SerializeField] private Transform boxVisual;
-    
-    [Space]
-    [SerializeField] private LayerMask enemyLayers;
-    
-    
-    
-    void Start()
+
+    [Space] [SerializeField] private LayerMask enemyLayers;
+
+
+    private void Start()
     {
         boxVisual.position = boxMidPoint.position;
         boxVisual.localScale = new Vector3(boxWidth, boxHeight, 1);
     }
-    
-    void Update()
+
+    private void Update()
     {
         if (_fireCountdown <= 0f)
         {
             DoDamage();
             _fireCountdown = 1f / fireRate;
         }
-      
-        _fireCountdown -= Time.deltaTime;   
+
+        _fireCountdown -= Time.deltaTime;
     }
-    
+
     private void DoDamage()
     {
-        Vector2 topLeft = new Vector2(boxMidPoint.position.x - boxWidth / 2, boxMidPoint.position.y + boxHeight / 2);
-        Vector2 bottomRight = new Vector2(boxMidPoint.position.x + boxWidth / 2, boxMidPoint.position.y - boxHeight / 2);
-        Collider2D[] hitEnemies = Physics2D.OverlapAreaAll(topLeft, bottomRight, enemyLayers);
-        foreach (Collider2D enemy in hitEnemies)
-        {
-            enemy.GetComponent<Enemy>().TakeDamage(damage);
-        }
+        var topLeft = new Vector2(boxMidPoint.position.x - boxWidth / 2, boxMidPoint.position.y + boxHeight / 2);
+        var bottomRight = new Vector2(boxMidPoint.position.x + boxWidth / 2, boxMidPoint.position.y - boxHeight / 2);
+        var hitEnemies = Physics2D.OverlapAreaAll(topLeft, bottomRight, enemyLayers);
+        foreach (var enemy in hitEnemies) enemy.GetComponent<Enemy>().TakeDamage(damage);
     }
 
     public override void Upgrade()

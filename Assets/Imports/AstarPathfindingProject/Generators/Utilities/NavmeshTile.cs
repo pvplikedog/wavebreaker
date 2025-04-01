@@ -1,76 +1,83 @@
-namespace Pathfinding {
-	using Pathfinding.Util;
-	using UnityEngine;
+using System;
+using Pathfinding.Util;
 
-	public class NavmeshTile : INavmeshHolder {
-		/// <summary>Tile triangles</summary>
-		public int[] tris;
+namespace Pathfinding
+{
+    public class NavmeshTile : INavmeshHolder
+    {
+        /// <summary>Bounding Box Tree for node lookups</summary>
+        public BBTree bbTree;
 
-		/// <summary>Tile vertices</summary>
-		public Int3[] verts;
+        /// <summary>
+        ///     Depth, in tile coordinates.
+        ///     Warning: Depths other than 1 are not supported. This is mainly here for possible future features.
+        /// </summary>
+        public int d;
 
-		/// <summary>Tile vertices in graph space</summary>
-		public Int3[] vertsInGraphSpace;
+        /// <summary>Temporary flag used for batching</summary>
+        public bool flag;
 
-		/// <summary>Tile X Coordinate</summary>
-		public int x;
+        public NavmeshBase graph;
 
-		/// <summary>Tile Z Coordinate</summary>
-		public int z;
+        /// <summary>All nodes in the tile</summary>
+        public TriangleMeshNode[] nodes;
 
-		/// <summary>
-		/// Width, in tile coordinates.
-		/// Warning: Widths other than 1 are not supported. This is mainly here for possible future features.
-		/// </summary>
-		public int w;
+        /// <summary>Tile triangles</summary>
+        public int[] tris;
 
-		/// <summary>
-		/// Depth, in tile coordinates.
-		/// Warning: Depths other than 1 are not supported. This is mainly here for possible future features.
-		/// </summary>
-		public int d;
+        /// <summary>Tile vertices</summary>
+        public Int3[] verts;
 
-		/// <summary>All nodes in the tile</summary>
-		public TriangleMeshNode[] nodes;
+        /// <summary>Tile vertices in graph space</summary>
+        public Int3[] vertsInGraphSpace;
 
-		/// <summary>Bounding Box Tree for node lookups</summary>
-		public BBTree bbTree;
+        /// <summary>
+        ///     Width, in tile coordinates.
+        ///     Warning: Widths other than 1 are not supported. This is mainly here for possible future features.
+        /// </summary>
+        public int w;
 
-		/// <summary>Temporary flag used for batching</summary>
-		public bool flag;
+        /// <summary>Tile X Coordinate</summary>
+        public int x;
 
-		public NavmeshBase graph;
+        /// <summary>Tile Z Coordinate</summary>
+        public int z;
 
-		#region INavmeshHolder implementation
+        public void GetNodes(Action<GraphNode> action)
+        {
+            if (nodes == null) return;
+            for (var i = 0; i < nodes.Length; i++) action(nodes[i]);
+        }
 
-		public void GetTileCoordinates (int tileIndex, out int x, out int z) {
-			x = this.x;
-			z = this.z;
-		}
+        #region INavmeshHolder implementation
 
-		public int GetVertexArrayIndex (int index) {
-			return index & NavmeshBase.VertexIndexMask;
-		}
+        public void GetTileCoordinates(int tileIndex, out int x, out int z)
+        {
+            x = this.x;
+            z = this.z;
+        }
 
-		/// <summary>Get a specific vertex in the tile</summary>
-		public Int3 GetVertex (int index) {
-			int idx = index & NavmeshBase.VertexIndexMask;
+        public int GetVertexArrayIndex(int index)
+        {
+            return index & NavmeshBase.VertexIndexMask;
+        }
 
-			return verts[idx];
-		}
+        /// <summary>Get a specific vertex in the tile</summary>
+        public Int3 GetVertex(int index)
+        {
+            var idx = index & NavmeshBase.VertexIndexMask;
 
-		public Int3 GetVertexInGraphSpace (int index) {
-			return vertsInGraphSpace[index & NavmeshBase.VertexIndexMask];
-		}
+            return verts[idx];
+        }
 
-		/// <summary>Transforms coordinates from graph space to world space</summary>
-		public GraphTransform transform { get { return graph.transform; } }
+        public Int3 GetVertexInGraphSpace(int index)
+        {
+            return vertsInGraphSpace[index & NavmeshBase.VertexIndexMask];
+        }
 
-		#endregion
+        /// <summary>Transforms coordinates from graph space to world space</summary>
+        public GraphTransform transform => graph.transform;
 
-		public void GetNodes (System.Action<GraphNode> action) {
-			if (nodes == null) return;
-			for (int i = 0; i < nodes.Length; i++) action(nodes[i]);
-		}
-	}
+        #endregion
+    }
 }
