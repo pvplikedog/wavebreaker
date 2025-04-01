@@ -10,7 +10,6 @@ public class PassiveUpgradeManager : MonoBehaviour
     [HideInInspector] public int speedLevel;
     [HideInInspector] public int damageLevel;
     [HideInInspector] public int xpLevel;
-
     [HideInInspector] public int damageReducerLevel;
 
     // Statue:

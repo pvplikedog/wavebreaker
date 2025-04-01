@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Pathfinding;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,6 +10,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float damage = 10f;
     [SerializeField] private float damageRate = 3;
     [SerializeField] private float movementSpeed = 3f;
+    
+    public SpriteRenderer spriteRenderer;
 
     [Header("Loot")] public List<LootItem> lootItems = new();
 
@@ -120,6 +123,6 @@ public class Enemy : MonoBehaviour
 
     private void UpgradeSpeed()
     {
-        aiPath.maxSpeed = movementSpeed;
+        aiPath.maxSpeed = math.max(movementSpeed, 1f);
     }
 }

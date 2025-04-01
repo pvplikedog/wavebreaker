@@ -1,9 +1,10 @@
-using System;
 using UnityEngine;
 
-public class MassDestructWeapon : Weapon
+public class FreezingWeapon : Weapon
 {
     [SerializeField] private float damage = 10f;
+    [SerializeField] private float freezePower = 0.4f;
+    [SerializeField] private int targetAmount = 1;
 
     private void Update()
     {
@@ -19,9 +20,19 @@ public class MassDestructWeapon : Weapon
     private void Shoot()
     {
         var enemies = GameObject.FindGameObjectsWithTag(enemyTag); // Performance issue, probably will need to rework.
-        foreach (var enemy in enemies) enemy.GetComponent<Enemy>().TakeDamage(damage);
+        for (int i = 0; i < targetAmount; i++)
+        {
+            var randomEnemy = enemies[UnityEngine.Random.Range(0, enemies.Length)];
+            if (randomEnemy)
+            {
+                var enemy = randomEnemy.GetComponent<Enemy>();
+                enemy.DecreaseSpeed(freezePower);
+                enemy.TakeDamage(damage);
+                enemy.spriteRenderer.color = new Color(79/255f, 154/255f, 217/255f);
+            }
+        }
     }
-
+    
     public override void Upgrade()
     {
         switch (_curLvl)
@@ -31,16 +42,15 @@ public class MassDestructWeapon : Weapon
                 _curLvl++;
                 break;
             case 2:
-                fireRate *= 1.5f;
+                targetAmount = 2;
                 _curLvl++;
                 break;
             case 3:
-                damage *= 1.5f;
+                freezePower *= 1.5f;
                 _curLvl++;
                 break;
             case 4:
-                fireRate *= 1.5f;
-                damage *= 1.5f;
+                targetAmount = 3;
                 _curLvl++;
                 break;
         }

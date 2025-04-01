@@ -21,7 +21,12 @@ public class UpgradeOptionSO : ScriptableObject
         StatueHealthPassive,
         StatueRegenPassive,
         StatueDamageReducePassive,
-        StatueFireRatePassive
+        StatueFireRatePassive,
+        StatueGun,
+        MassDestruct,
+        FreezingWeapon,
+        AuraWeapon,
+        VerticalWeapon
     }
 
     public Sprite Icon;

@@ -2,12 +2,21 @@ using UnityEngine;
 
 public class ItemsHandler : MonoBehaviour
 {
+    [Header("Player Weapons")]
     [SerializeField] private GameObject GunWeapon;
     [SerializeField] private GameObject HardGunWeapon;
     [SerializeField] private GameObject MeleeCircleWeapon;
     [SerializeField] private GameObject MeleeBoxWeapon;
     [SerializeField] private GameObject SkyFallWeapon;
-
+    
+    [Header("Statue Weapons")]
+    [SerializeField] private GameObject StatueGun;
+    [SerializeField] private GameObject MassDestruct;
+    [SerializeField] private GameObject FreezingWeapon;
+    [SerializeField] private GameObject AuraWeapon;
+    [SerializeField] private GameObject VerticalWeapon;
+    [Space]
+    
     [SerializeField] private InventoryManager inventoryManager;
     [SerializeField] private PassiveUpgradeManager passiveUpgradeManager;
 
@@ -144,5 +153,70 @@ public class ItemsHandler : MonoBehaviour
         if (passiveUpgradeManager.statueFireRateLevel == 0) inventoryManager.AddPassive(upgradeOption);
 
         passiveUpgradeManager.UpgradeStatueFireRate();
+    }
+
+    public void AddOrUpgradeStatueGunWeapon(UpgradeOptionSO upgradeOption)
+    {
+        if (StatueGun.activeSelf)
+        {
+            StatueGun.GetComponent<Weapon>().Upgrade();
+        }
+        else
+        {
+            StatueGun.SetActive(true);
+            inventoryManager.AddWeapon(StatueGun.GetComponent<Weapon>());
+        }
+    }
+
+    public void AddOrUpgradeMassDestructWeapon(UpgradeOptionSO upgradeOption)
+    {
+        if (MassDestruct.activeSelf)
+        {
+            MassDestruct.GetComponent<Weapon>().Upgrade();
+        }
+        else
+        {
+            MassDestruct.SetActive(true);
+            inventoryManager.AddWeapon(MassDestruct.GetComponent<Weapon>());
+        }
+    }
+
+    public void AddOrUpgradeFreezingWeapon(UpgradeOptionSO upgradeOption)
+    {
+        if (FreezingWeapon.activeSelf)
+        {
+            FreezingWeapon.GetComponent<Weapon>().Upgrade();
+        }
+        else
+        {
+            FreezingWeapon.SetActive(true);
+            inventoryManager.AddWeapon(FreezingWeapon.GetComponent<Weapon>());
+        }
+    }
+
+    public void AddOrUpgradeAuraWeapon(UpgradeOptionSO upgradeOption)
+    {
+        if (AuraWeapon.activeSelf)
+        {
+            AuraWeapon.GetComponent<Weapon>().Upgrade();
+        }
+        else
+        {
+            AuraWeapon.SetActive(true);
+            inventoryManager.AddWeapon(AuraWeapon.GetComponent<Weapon>());
+        }
+    }
+
+    public void AddOrUpgradeVerticalWeapon(UpgradeOptionSO upgradeOption)
+    {
+        if (VerticalWeapon.activeSelf)
+        {
+            VerticalWeapon.GetComponent<Weapon>().Upgrade();
+        }
+        else
+        {
+            VerticalWeapon.SetActive(true);
+            inventoryManager.AddWeapon(VerticalWeapon.GetComponent<Weapon>());
+        }
     }
 }

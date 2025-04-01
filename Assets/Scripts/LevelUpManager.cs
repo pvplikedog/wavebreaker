@@ -167,6 +167,21 @@ public class LevelUpManager : MonoBehaviour
             case UpgradeOptionSO.UpgradeOption.StatueFireRatePassive:
                 itemsHandler.AddOrUpgradeStatueFireRateLevel(upgradeOption);
                 break;
+            case UpgradeOptionSO.UpgradeOption.StatueGun:
+                itemsHandler.AddOrUpgradeStatueGunWeapon(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.MassDestruct:
+                itemsHandler.AddOrUpgradeMassDestructWeapon(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.FreezingWeapon:
+                itemsHandler.AddOrUpgradeFreezingWeapon(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.AuraWeapon:
+                itemsHandler.AddOrUpgradeAuraWeapon(upgradeOption);
+                break;
+            case UpgradeOptionSO.UpgradeOption.VerticalWeapon:
+                itemsHandler.AddOrUpgradeVerticalWeapon(upgradeOption);
+                break;
         }
     }
 
@@ -189,6 +204,11 @@ public class LevelUpManager : MonoBehaviour
             case UpgradeOptionSO.UpgradeOption.MeleeCircle:
             case UpgradeOptionSO.UpgradeOption.MeleeBox:
             case UpgradeOptionSO.UpgradeOption.SkyFall:
+            case UpgradeOptionSO.UpgradeOption.StatueGun:
+            case UpgradeOptionSO.UpgradeOption.MassDestruct:
+            case UpgradeOptionSO.UpgradeOption.FreezingWeapon:
+            case UpgradeOptionSO.UpgradeOption.AuraWeapon:
+            case UpgradeOptionSO.UpgradeOption.VerticalWeapon:
                 return true;
             default:
                 return false;
