@@ -4,6 +4,8 @@ public class GunBullet : MonoBehaviour
 {
     [SerializeField] private float speed = 30f;
     [SerializeField] private float damage = 5f;
+    [SerializeField] private float knockbackForce = 1f;
+    [SerializeField] private float knockbackDuration = 0.1f;
     private Transform target;
 
     private void Update()
@@ -33,7 +35,7 @@ public class GunBullet : MonoBehaviour
 
     private void HitTarget()
     {
-        target.GetComponent<Enemy>().TakeDamage(damage);
+        target.GetComponent<Enemy>().TakeDamage(damage, this.transform.position, knockbackForce, knockbackDuration);
         Destroy(gameObject);
     }
 }

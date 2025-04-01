@@ -36,7 +36,7 @@ public class MeleeBoxWeapon : Weapon
         var topLeft = new Vector2(boxMidPoint.position.x - boxWidth / 2, boxMidPoint.position.y + boxHeight / 2);
         var bottomRight = new Vector2(boxMidPoint.position.x + boxWidth / 2, boxMidPoint.position.y - boxHeight / 2);
         var hitEnemies = Physics2D.OverlapAreaAll(topLeft, bottomRight, enemyLayers);
-        foreach (var enemy in hitEnemies) enemy.GetComponent<Enemy>().TakeDamage(damage);
+        foreach (var enemy in hitEnemies) enemy.GetComponent<Enemy>().TakeDamage(damage, this.transform.position, knockbackForce, knockbackDuration);
     }
 
     public override void Upgrade()

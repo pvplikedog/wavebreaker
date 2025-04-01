@@ -8,6 +8,9 @@ public class CircleProjectile : MonoBehaviour
     [SerializeField] private Transform attackPoint;
     [SerializeField] private LayerMask enemyLayers;
     [SerializeField] private Transform projVisual;
+    
+    [SerializeField] private float knockbackForce = 4f;
+    [SerializeField] private float knockbackDuration = 0.2f;
     protected float _fireCountdown;
 
     private void Start()
@@ -31,7 +34,7 @@ public class CircleProjectile : MonoBehaviour
     private void DoDamage()
     {
         var hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, range, enemyLayers);
-        foreach (var enemy in hitEnemies) enemy.GetComponent<Enemy>().TakeDamage(damage);
+        foreach (var enemy in hitEnemies) enemy.GetComponent<Enemy>().TakeDamage(damage, this.transform.position, knockbackForce, knockbackDuration);
     }
 
     public void Setup(float fireRate, float range, float damage)

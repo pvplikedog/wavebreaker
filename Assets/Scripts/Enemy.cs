@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour
     
     public SpriteRenderer spriteRenderer;
 
+    private Vector2 knockbackVelocity;
+    private float knockbackDuration;
+
     [Header("Loot")] public List<LootItem> lootItems = new();
 
     private CircleCollider2D _collider;
@@ -41,6 +44,12 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (knockbackDuration > 0)
+        {
+            this.transform.position += (Vector3)knockbackVelocity * Time.deltaTime;
+            knockbackDuration -= Time.deltaTime;
+        }
+        
         if (_isPlayerInRange || _isStatueInRange)
         {
             if (_damageCountdown < 0f)
@@ -79,6 +88,19 @@ public class Enemy : MonoBehaviour
         health -= damage * PlayerStats.instance.DamageMultiplier;
         _enemyGfx.PlayTakeDamgeAnimation();
         if (health <= 0) Die();
+    }
+    
+    public void TakeDamage(float dmg, Vector2 sourcePosition, float knockbackForce = 5f, float knockbackDuration = 0.2f)
+    {
+        TakeDamage(dmg);
+
+        // Apply knockback
+        if (knockbackDuration > 0)
+        {
+            Vector2 direction = (Vector2)transform.position - sourcePosition;
+            direction.Normalize();
+            Knockback(direction * knockbackForce, knockbackDuration);
+        }
     }
 
     private void Die()
@@ -124,5 +146,15 @@ public class Enemy : MonoBehaviour
     private void UpgradeSpeed()
     {
         aiPath.maxSpeed = math.max(movementSpeed, 1f);
+    }
+
+    public void Knockback(Vector2 velocity, float duration)
+    {
+        if (knockbackDuration > 0f)
+        {
+            return;
+        }
+        knockbackVelocity = velocity;
+        knockbackDuration = duration;
     }
 }

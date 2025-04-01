@@ -167,6 +167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   fireRate: 1.5
+  knockbackForce: 0
+  knockbackDuration: 0
   icon: {fileID: 1328899968, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   range: 1.5
   damage: 3
@@ -975,6 +977,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   fireRate: 1
+  knockbackForce: 3
+  knockbackDuration: 0.2
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   damage: 10
   boxWidth: 3
@@ -2268,6 +2272,7 @@ MonoBehaviour:
   healthBar: {fileID: 2071575994}
   gameManager: {fileID: 1203025360}
   playerHealth: {fileID: 1231674114}
+  damageEffect: {fileID: 458247531939059366, guid: 459a02a4f22644c2599bd22918ee7a94, type: 3}
 --- !u!50 &548523593
 Rigidbody2D:
   serializedVersion: 5
@@ -2923,6 +2928,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   fireRate: 0.5
+  knockbackForce: 4
+  knockbackDuration: 0.2
   icon: {fileID: 1997828774, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
   bulletPrefab: {fileID: 3944544565474640347, guid: a05793767b7fe47a3ac522c12bc1016f, type: 3}
   target: {fileID: 0}
@@ -5874,6 +5881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   fireRate: 0.2
+  knockbackForce: 0
+  knockbackDuration: 0
   icon: {fileID: 21300164, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
   damage: 3
 --- !u!1 &1043854772
@@ -7495,7 +7504,7 @@ MonoBehaviour:
   DamageMultiplier: 1
   XPMultiplier: 1
   DamageReducer: 0
-  StatueMaxHealth: 100
+  StatueMaxHealth: 1000
   StatueRegenerationRate: 0.5
   StatueDamageReducer: 0
   StatueFireRateMultiplier: 1
@@ -7635,6 +7644,7 @@ MonoBehaviour:
   gameManager: {fileID: 1203025360}
   levelManager: {fileID: 1203025357}
   inventoryManager: {fileID: 1203025359}
+  damageEffect: {fileID: 458247531939059366, guid: 811030c62ef044294840993f8829d3b5, type: 3}
 --- !u!114 &1231674115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8724,6 +8734,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   fireRate: 5
+  knockbackForce: 0
+  knockbackDuration: 0
   icon: {fileID: 21300160, guid: c3a40e1c46727b94e959990527f8e7fa, type: 3}
   bulletPrefab: {fileID: 4310252759556614132, guid: 23c673d4b5bb746c9b2c1441866f2491, type: 3}
   target: {fileID: 0}
@@ -9228,6 +9240,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   fireRate: 1
+  knockbackForce: 2
+  knockbackDuration: 0.2
   icon: {fileID: 21300022, guid: ed7554aeefd5da44a9fe1ee9b93afe77, type: 3}
   range: 2.5
   damage: 10
@@ -9749,6 +9763,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   fireRate: 1
+  knockbackForce: 5
+  knockbackDuration: 0.2
   icon: {fileID: -155058199, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   damage: 10
   boxWidth: 3.5
@@ -10885,6 +10901,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   fireRate: 0.2
+  knockbackForce: 0
+  knockbackDuration: 0
   icon: {fileID: -1523209149, guid: d33598d781682e049a53a0a13104ef29, type: 3}
   circlePrefab: {fileID: 4317920894441236792, guid: 6969aa29621a94362aa301435ce87aed, type: 3}
   damage: 10
@@ -11712,6 +11730,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   fireRate: 0.3
+  knockbackForce: 0
+  knockbackDuration: 0
   icon: {fileID: 21300150, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
   damage: 1
   freezePower: 0.4
@@ -12883,6 +12903,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   fireRate: 1
+  knockbackForce: 5
+  knockbackDuration: 0.2
   icon: {fileID: 1737672109, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
   bulletPrefab: {fileID: 3909930051983720688, guid: 7874aa22c0dcd4b41a6de00d3c4cf7c6, type: 3}
   target: {fileID: 0}

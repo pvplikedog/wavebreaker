@@ -134,3 +134,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   damage: 1
+  knockbackForce: 0
+  knockbackDuration: 0

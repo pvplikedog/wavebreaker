@@ -1,6 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class StatueHealth : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class StatueHealth : MonoBehaviour
     [SerializeField] private Image healthBar;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private PlayerHealth playerHealth;
+    
+    [SerializeField] private ParticleSystem damageEffect;
+
     private float _currentHealth;
 
     private float _healCountdown;
@@ -34,6 +38,11 @@ public class StatueHealth : MonoBehaviour
         _currentHealth -= damage * (1 - PlayerStats.instance.StatueDamageReducer);
 
         UpdateHealthBar();
+        
+        if (damageEffect)
+        {
+            Instantiate(damageEffect, transform.position + Vector3.up, Quaternion.identity);
+        }
 
         if (_currentHealth <= 0) Die();
     }

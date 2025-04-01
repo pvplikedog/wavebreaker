@@ -16,6 +16,8 @@ public class PlayerHealth : MonoBehaviour
     private float _healCountdown;
     private Canvas _playerCanvas;
     private PlayerMovement _playerMovement;
+    
+    [SerializeField] private ParticleSystem damageEffect;
 
     private void Awake()
     {
@@ -47,6 +49,11 @@ public class PlayerHealth : MonoBehaviour
         _currentHealth -= damage * (1 - PlayerStats.instance.DamageReducer);
 
         UpdateHealthBar();
+
+        if (damageEffect)
+        {
+            Instantiate(damageEffect, transform.position, Quaternion.identity);
+        }
 
         if (_currentHealth <= 0) Die();
     }

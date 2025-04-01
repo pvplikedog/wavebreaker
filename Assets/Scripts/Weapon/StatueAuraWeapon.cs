@@ -27,7 +27,7 @@ public class StatueAuraWeapon : Weapon
     private void DoDamage()
     {
         var hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, range, enemyLayers);
-        foreach (var enemy in hitEnemies) enemy.GetComponent<Enemy>().TakeDamage(damage);
+        foreach (var enemy in hitEnemies) enemy.GetComponent<Enemy>().TakeDamage(damage, this.transform.position, knockbackForce, knockbackDuration);
     }
 
     public override void Upgrade()
