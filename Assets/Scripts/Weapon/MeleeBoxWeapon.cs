@@ -58,6 +58,7 @@ public class MeleeBoxWeapon : Weapon
             case 2:
                 boxWidth *= 2f;
                 boxHeight *= 2f;
+                boxVisual.localScale = new Vector3(boxWidth, boxHeight, 1);
                 _curLvl++;
                 break;
             case 3:

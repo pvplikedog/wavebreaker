@@ -557,7 +557,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
-  projVisual: {fileID: 3970004472839296571}
+  projVisual: {fileID: 2582994788170287377}
   knockbackForce: 4
   knockbackDuration: 0.2
   effectPrefab: {fileID: 5982913980147518891, guid: 52609d5ddadb2444e8e5644d67b04791, type: 3}

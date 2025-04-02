@@ -43,11 +43,13 @@ public class StatueAuraWeapon : Weapon
                 damage *= 2f;
                 fireRate *= 1.5f;
                 range *= 1.5f;
+                circleVisual.localScale = new Vector3(range * 2, range * 2, 1);
                 _curLvl++;
                 break;
             case 2:
                 range *= 1.5f;
                 fireRate *= 1.5f;
+                circleVisual.localScale = new Vector3(range * 2, range * 2, 1);
                 _curLvl++;
                 break;
             case 3:
