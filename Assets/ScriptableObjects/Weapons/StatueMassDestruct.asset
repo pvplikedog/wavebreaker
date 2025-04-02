@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
   m_Name: StatueMassDestruct
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300086, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
+  Icon: {fileID: 21300000, guid: 587503b6015abc741ad5147fff8f4a06, type: 3}
   UpgradeType: 17
   MaxLvl: 5
   Names:

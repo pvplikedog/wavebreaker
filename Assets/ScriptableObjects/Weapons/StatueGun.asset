@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
   m_Name: StatueGun
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300086, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
+  Icon: {fileID: 21300000, guid: 1877011fdc8954440a807dd46b4eaab4, type: 3}
   UpgradeType: 16
   MaxLvl: 5
   Names:

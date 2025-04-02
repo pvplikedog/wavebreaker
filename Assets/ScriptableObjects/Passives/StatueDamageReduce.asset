@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
   m_Name: StatueDamageReduce
   m_EditorClassIdentifier: 
-  Icon: {fileID: 86454189, guid: 4104ee12b4d54f54b91b3ba875787837, type: 3}
+  Icon: {fileID: 21300000, guid: d5d7f95582604484a87a97c246803bc7, type: 3}
   UpgradeType: 14
   MaxLvl: 5
   Names:

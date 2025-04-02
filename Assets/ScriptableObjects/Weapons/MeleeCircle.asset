@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
   m_Name: MeleeCircle
   m_EditorClassIdentifier: 
-  Icon: {fileID: 1328899968, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  Icon: {fileID: 21300000, guid: 042fae2dd68bce044b8fbd1f26724a2d, type: 3}
   UpgradeType: 2
   MaxLvl: 5
   Names:

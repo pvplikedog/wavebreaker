@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
   m_Name: Damage
   m_EditorClassIdentifier: 
-  Icon: {fileID: -1002307068, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  Icon: {fileID: 21300000, guid: c1101a972f67d164db2754844fbeeda2, type: 3}
   UpgradeType: 9
   MaxLvl: 5
   Names:

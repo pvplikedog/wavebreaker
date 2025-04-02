@@ -169,7 +169,7 @@ MonoBehaviour:
   fireRate: 1.5
   knockbackForce: 0
   knockbackDuration: 0
-  icon: {fileID: 1328899968, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  icon: {fileID: 21300000, guid: 042fae2dd68bce044b8fbd1f26724a2d, type: 3}
   range: 1.5
   damage: 3
   attackPoint: {fileID: 1672209040}
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   fireRate: 1
   knockbackForce: 3
   knockbackDuration: 0.2
-  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: 7b8e0222a006d824e930445c7d435ac3, type: 3}
   damage: 10
   boxWidth: 3
   boxHeight: 6
@@ -2258,7 +2258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2374,6 +2374,8 @@ MonoBehaviour:
   gameManager: {fileID: 1203025360}
   playerHealth: {fileID: 1231674114}
   damageEffect: {fileID: 458247531939059366, guid: 459a02a4f22644c2599bd22918ee7a94, type: 3}
+  deathEffect: {fileID: 458247531939059366, guid: e2ecaf29d834e4ea8b9c298a3a44e115, type: 3}
+  statueVisual: {fileID: 2093683871}
 --- !u!50 &548523593
 Rigidbody2D:
   serializedVersion: 5
@@ -3026,7 +3028,7 @@ MonoBehaviour:
   fireRate: 0.5
   knockbackForce: 4
   knockbackDuration: 0.2
-  icon: {fileID: 1997828774, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
+  icon: {fileID: 21300000, guid: a30e9a59a4ffb884489afda27a4945c3, type: 3}
   bulletPrefab: {fileID: 3944544565474640347, guid: a05793767b7fe47a3ac522c12bc1016f, type: 3}
   target: {fileID: 0}
   damage: 10
@@ -3086,7 +3088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3330,7 +3332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3848,7 +3850,7 @@ MonoBehaviour:
   waves:
   - waveName: wave 1
     enemyGroups:
-    - enemyCount: 3
+    - enemyCount: 5
       spawnCount: 0
       enemyPrefab: {fileID: 2011466421936685690, guid: 1d7a3d509eb7c4fa28ca5e1dab9bf08b, type: 3}
     waveQuota: 0
@@ -3856,9 +3858,9 @@ MonoBehaviour:
     spawnCount: 0
   - waveName: wave 1
     enemyGroups:
-    - enemyCount: 3
+    - enemyCount: 2
       spawnCount: 0
-      enemyPrefab: {fileID: 2011466421936685690, guid: 1d7a3d509eb7c4fa28ca5e1dab9bf08b, type: 3}
+      enemyPrefab: {fileID: 4899477283671617586, guid: ff6e1783e3e9e42b9af6aa72c2c0c113, type: 3}
     waveQuota: 0
     spawnInterval: 1
     spawnCount: 0
@@ -6049,7 +6051,7 @@ MonoBehaviour:
   fireRate: 0.2
   knockbackForce: 0
   knockbackDuration: 0
-  icon: {fileID: 21300164, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
+  icon: {fileID: 21300000, guid: 587503b6015abc741ad5147fff8f4a06, type: 3}
   damage: 3
 --- !u!1 &1043854772
 GameObject:
@@ -7674,7 +7676,7 @@ MonoBehaviour:
   DamageMultiplier: 1
   XPMultiplier: 1
   DamageReducer: 0
-  StatueMaxHealth: 1000
+  StatueMaxHealth: 100
   StatueRegenerationRate: 0.5
   StatueDamageReducer: 0
   StatueFireRateMultiplier: 1
@@ -8968,7 +8970,7 @@ MonoBehaviour:
   fireRate: 5
   knockbackForce: 0
   knockbackDuration: 0
-  icon: {fileID: 21300160, guid: c3a40e1c46727b94e959990527f8e7fa, type: 3}
+  icon: {fileID: 21300000, guid: 1877011fdc8954440a807dd46b4eaab4, type: 3}
   bulletPrefab: {fileID: 4310252759556614132, guid: 23c673d4b5bb746c9b2c1441866f2491, type: 3}
   target: {fileID: 0}
   range: 4
@@ -9474,7 +9476,7 @@ MonoBehaviour:
   fireRate: 1
   knockbackForce: 2
   knockbackDuration: 0.2
-  icon: {fileID: 21300022, guid: ed7554aeefd5da44a9fe1ee9b93afe77, type: 3}
+  icon: {fileID: 21300000, guid: 2c523fa3ca4e1fc4b9a5713e504e6cce, type: 3}
   range: 2.5
   damage: 10
   attackPoint: {fileID: 669272012}
@@ -9997,7 +9999,7 @@ MonoBehaviour:
   fireRate: 1
   knockbackForce: 5
   knockbackDuration: 0.2
-  icon: {fileID: -155058199, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  icon: {fileID: 21300000, guid: 3281101b955224c4f9bfd58e8ab4c342, type: 3}
   damage: 10
   boxWidth: 3.5
   boxHeight: 1
@@ -11034,7 +11036,7 @@ MonoBehaviour:
   fireRate: 0.2
   knockbackForce: 0
   knockbackDuration: 0
-  icon: {fileID: -1523209149, guid: d33598d781682e049a53a0a13104ef29, type: 3}
+  icon: {fileID: 21300000, guid: ace8a02646afeda4880fc3cb14cad705, type: 3}
   circlePrefab: {fileID: 4317920894441236792, guid: 6969aa29621a94362aa301435ce87aed, type: 3}
   damage: 10
   timeLast: 2
@@ -11647,7 +11649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11795,7 +11797,7 @@ MonoBehaviour:
   fireRate: 0.3
   knockbackForce: 0
   knockbackDuration: 0
-  icon: {fileID: 21300150, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
+  icon: {fileID: 21300000, guid: 21ed692efe3d95a40bcb58ec97b4d87a, type: 3}
   damage: 1
   freezePower: 0.4
   targetAmount: 1
@@ -12968,7 +12970,7 @@ MonoBehaviour:
   fireRate: 1
   knockbackForce: 5
   knockbackDuration: 0.2
-  icon: {fileID: 1737672109, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
+  icon: {fileID: 21300000, guid: bbf8638a8a75d9c42b93639213c92c9b, type: 3}
   bulletPrefab: {fileID: 3909930051983720688, guid: 7874aa22c0dcd4b41a6de00d3c4cf7c6, type: 3}
   target: {fileID: 0}
   range: 3
@@ -13519,9 +13521,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750450, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750450, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7947911505737750455, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
       propertyPath: m_Name
       value: Statue Visual
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7947911505737750455, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
       propertyPath: m_TagString
@@ -13683,6 +13697,11 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!212 &2093683871 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750450, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
+  m_PrefabInstance: {fileID: 2068292326}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2120649116
 GameObject:
   m_ObjectHideFlags: 0

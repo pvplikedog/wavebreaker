@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
   m_Name: Regen
   m_EditorClassIdentifier: 
-  Icon: {fileID: 927338625, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  Icon: {fileID: 21300000, guid: 117b17facff65dc42b1b57deb7c21551, type: 3}
   UpgradeType: 7
   MaxLvl: 5
   Names:

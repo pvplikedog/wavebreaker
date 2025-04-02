@@ -26,6 +26,7 @@ public class FreezingWeapon : Weapon
             if (randomEnemy)
             {
                 var enemy = randomEnemy.GetComponent<Enemy>();
+                if (!enemy) return;
                 enemy.DecreaseSpeed(freezePower);
                 enemy.TakeDamage(damage);
                 enemy.spriteRenderer.color = new Color(79/255f, 154/255f, 217/255f);

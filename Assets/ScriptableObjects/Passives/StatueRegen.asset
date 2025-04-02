@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
   m_Name: StatueRegen
   m_EditorClassIdentifier: 
-  Icon: {fileID: 381631601, guid: 0c187a32c5bde4747be8d00770b07403, type: 3}
+  Icon: {fileID: 21300000, guid: 44dc65116207f4b46aa85443dae5ad96, type: 3}
   UpgradeType: 13
   MaxLvl: 5
   Names:

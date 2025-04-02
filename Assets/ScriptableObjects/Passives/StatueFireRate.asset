@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
   m_Name: StatueFireRate
   m_EditorClassIdentifier: 
-  Icon: {fileID: -2007313318, guid: 3bcb7877229a5334da528f2f0872b5c3, type: 3}
+  Icon: {fileID: 21300000, guid: 17c2d0550f9d2f9418f458279eb57c65, type: 3}
   UpgradeType: 15
   MaxLvl: 5
   Names:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
   m_Name: XP
   m_EditorClassIdentifier: 
-  Icon: {fileID: 362616440, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
+  Icon: {fileID: 21300000, guid: 4461c87bad5222349b14c22b26d43b95, type: 3}
   UpgradeType: 10
   MaxLvl: 5
   Names:
