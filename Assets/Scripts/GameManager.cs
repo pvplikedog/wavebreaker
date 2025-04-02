@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class GameManager : MonoBehaviour
 {
@@ -224,8 +225,10 @@ public class GameManager : MonoBehaviour
         tmPro.verticalAlignment = VerticalAlignmentOptions.Middle;
         tmPro.fontSize = textFontSize;
         if (textFont) tmPro.font = textFont;
-        rect.position = referenceCamera.WorldToScreenPoint(target.position);
-        
+        // rect.position = referenceCamera.WorldToScreenPoint(target.position);
+        Vector3 targetPosition = target.position + new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.6f, 0.6f), 0);
+        rect.position = referenceCamera.WorldToScreenPoint(targetPosition);
+
         Destroy(textObject, duration);
         
         textObject.transform.SetParent(Instance.damageTextCanvas.transform);
@@ -243,7 +246,7 @@ public class GameManager : MonoBehaviour
             
             if(target) {
                 yOffset += speed * Time.deltaTime;
-                rect.position = referenceCamera.WorldToScreenPoint(target.position + new Vector3(0,yOffset));
+                rect.position = referenceCamera.WorldToScreenPoint(targetPosition + new Vector3(0,yOffset));
             } else {
                 // If target is dead, just pan up where the text is at.
                 rect.position += new Vector3(0, speed * Time.deltaTime, 0);

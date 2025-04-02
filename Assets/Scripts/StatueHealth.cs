@@ -11,6 +11,9 @@ public class StatueHealth : MonoBehaviour
     [SerializeField] private PlayerHealth playerHealth;
     
     [SerializeField] private ParticleSystem damageEffect;
+    [SerializeField] private ParticleSystem deathEffect;
+    
+    [SerializeField] private SpriteRenderer statueVisual;
 
     private float _currentHealth;
 
@@ -63,7 +66,15 @@ public class StatueHealth : MonoBehaviour
         if (!gameManager.IsGameOver) playerHealth.GameOver();
         gameObject.tag = "Untagged";
         collider.enabled = false;
+        
+        statueVisual.enabled = false;
 
+        if (damageEffect)
+        {
+            Instantiate(deathEffect, transform.position + Vector3.up, Quaternion.identity);
+        }
+        
+        
         // play animation here.
         //playerAnimator.PlayDeathAnimation();
 
