@@ -4,6 +4,9 @@ using UnityEngine;
 public class MassDestructWeapon : Weapon
 {
     [SerializeField] private float damage = 10f;
+    
+    [SerializeField] private Transform effectSpawnPoint;
+    [SerializeField] private GameObject effectPrefab;
 
     private void Update()
     {
@@ -19,7 +22,11 @@ public class MassDestructWeapon : Weapon
     private void Shoot()
     {
         var enemies = GameObject.FindGameObjectsWithTag(enemyTag); // Performance issue, probably will need to rework.
+        if (enemies.Length <= 0) return;
+        
         foreach (var enemy in enemies) enemy.GetComponent<Enemy>().TakeDamage(damage);
+        var effect = Instantiate(effectPrefab, effectSpawnPoint.position, Quaternion.identity);
+        Destroy(effect, 0.5f);
     }
 
     public override void Upgrade()

@@ -7,9 +7,13 @@ public class StatueAuraWeapon : Weapon
     [SerializeField] private Transform attackPoint;
     [SerializeField] private LayerMask enemyLayers;
     [SerializeField] private Transform circleVisual;
+    
+    private Animator animator;
+    private const string IS_HIT = "Hit";
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         circleVisual.localScale = new Vector3(range * 2, range * 2, 1);
     }
 
@@ -26,6 +30,7 @@ public class StatueAuraWeapon : Weapon
 
     private void DoDamage()
     {
+        animator.SetTrigger(IS_HIT);
         var hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, range, enemyLayers);
         foreach (var enemy in hitEnemies) enemy.GetComponent<Enemy>().TakeDamage(damage, this.transform.position, knockbackForce, knockbackDuration);
     }

@@ -6,6 +6,9 @@ public class FreezingWeapon : Weapon
     [SerializeField] private float freezePower = 0.4f;
     [SerializeField] private int targetAmount = 1;
 
+    [SerializeField] private Transform effectSpawnPoint;
+    [SerializeField] private GameObject effectPrefab;
+
     private void Update()
     {
         if (_fireCountdown <= 0f)
@@ -20,6 +23,9 @@ public class FreezingWeapon : Weapon
     private void Shoot()
     {
         var enemies = GameObject.FindGameObjectsWithTag(enemyTag); // Performance issue, probably will need to rework.
+        if (enemies.Length <= 0) return;
+        var effect = Instantiate(effectPrefab, effectSpawnPoint.position, Quaternion.identity);
+        Destroy(effect, 0.5f);
         for (int i = 0; i < targetAmount; i++)
         {
             var randomEnemy = enemies[UnityEngine.Random.Range(0, enemies.Length)];

@@ -12,6 +12,9 @@ public class MeleeBoxWeapon : Weapon
     [SerializeField] private Transform boxVisual;
 
     [Space] [SerializeField] private LayerMask enemyLayers;
+    
+    [SerializeField] private Animator animator;
+    private const string IS_HIT = "Hit";
 
 
     private void Start()
@@ -33,6 +36,10 @@ public class MeleeBoxWeapon : Weapon
 
     private void DoDamage()
     {
+        if (animator)
+        {
+            animator.SetTrigger(IS_HIT);
+        }
         var topLeft = new Vector2(boxMidPoint.position.x - boxWidth / 2, boxMidPoint.position.y + boxHeight / 2);
         var bottomRight = new Vector2(boxMidPoint.position.x + boxWidth / 2, boxMidPoint.position.y - boxHeight / 2);
         var hitEnemies = Physics2D.OverlapAreaAll(topLeft, bottomRight, enemyLayers);

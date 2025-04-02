@@ -12,10 +12,14 @@ public class StatueVerticalWeapon : Weapon
     [SerializeField] private Transform boxVisual;
 
     [Space] [SerializeField] private LayerMask enemyLayers;
+    
+    private Animator animator;
+    private const string IS_HIT = "Hit";
 
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         boxVisual.position = boxMidPoint.position;
         boxVisual.localScale = new Vector3(boxWidth, boxHeight, 1);
     }
@@ -33,6 +37,8 @@ public class StatueVerticalWeapon : Weapon
 
     private void DoDamage()
     {
+        animator.SetTrigger(IS_HIT);
+
         var topLeft = new Vector2(boxMidPoint.position.x - boxWidth / 2, boxMidPoint.position.y + boxHeight / 2);
         var bottomRight = new Vector2(boxMidPoint.position.x + boxWidth / 2, boxMidPoint.position.y - boxHeight / 2);
         var hitEnemies = Physics2D.OverlapAreaAll(topLeft, bottomRight, enemyLayers);

@@ -103,6 +103,8 @@ public class EnemySpawner : MonoBehaviour
     {
         AIDestinationSetter aiDestinationSetter = enemy.GetComponent<AIDestinationSetter>();
         if (!aiDestinationSetter) return;
+        if (!playerTransform) aiDestinationSetter.target = statueTransform;
+        if (!statueTransform) aiDestinationSetter.target = playerTransform;
         aiDestinationSetter.target = Random.Range(0f, 1f) <= 0.5f ? playerTransform : statueTransform;
     }
 }
