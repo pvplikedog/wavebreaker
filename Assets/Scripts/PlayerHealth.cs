@@ -18,6 +18,9 @@ public class PlayerHealth : MonoBehaviour
     private PlayerMovement _playerMovement;
     
     [SerializeField] private ParticleSystem damageEffect;
+    
+    [SerializeField] private AudioSource playerTakeDamage;
+    [SerializeField] private GameObject gameOverSound;
 
     private void Awake()
     {
@@ -46,6 +49,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Debug.Log(playerTakeDamage);
+        if (playerTakeDamage)
+        {
+            playerTakeDamage.Play();
+        }
         _currentHealth -= damage * (1 - PlayerStats.instance.DamageReducer);
 
         UpdateHealthBar();
@@ -69,9 +77,16 @@ public class PlayerHealth : MonoBehaviour
         healthBar.fillAmount = _currentHealth / PlayerStats.instance.MaxHealth;
     }
 
+    private bool isGameOver = false;
+
     private void Die()
     {
-        if (!gameManager.IsGameOver) GameOver();
+        if (!gameManager.IsGameOver && !isGameOver)
+        {
+            isGameOver = true;
+            if (gameOverSound) Instantiate(gameOverSound, transform.position, Quaternion.identity);
+            GameOver();
+        }
         //gameManager.GameOver();
         gameObject.tag = "Untagged";
         _collider.enabled = false;

@@ -18,9 +18,13 @@ public class StatueHealth : MonoBehaviour
     private float _currentHealth;
 
     private float _healCountdown;
+    
+    private AudioSource _hitSound;
+    [SerializeField] private GameObject gameOverSound;
 
     private void Start()
     {
+        _hitSound = GetComponent<AudioSource>();
         _currentHealth = PlayerStats.instance.StatueMaxHealth;
     }
 
@@ -37,6 +41,10 @@ public class StatueHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (_hitSound && !_hitSound.isPlaying)
+        {
+            _hitSound.Play();
+        }
         Debug.Log("Taking damage");
         _currentHealth -= damage * (1 - PlayerStats.instance.StatueDamageReducer);
 
@@ -60,10 +68,17 @@ public class StatueHealth : MonoBehaviour
     {
         healthBar.fillAmount = _currentHealth / PlayerStats.instance.StatueMaxHealth;
     }
+    
+    private bool isGameOver = false;
 
     private void Die()
     {
-        if (!gameManager.IsGameOver) playerHealth.GameOver();
+        if (!gameManager.IsGameOver && !isGameOver)
+        {
+            isGameOver = true;
+            if (gameOverSound) Instantiate(gameOverSound, transform.position, Quaternion.identity);
+            playerHealth.GameOver();
+        }
         gameObject.tag = "Untagged";
         collider.enabled = false;
         

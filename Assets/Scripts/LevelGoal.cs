@@ -25,6 +25,8 @@ public class LevelGoal : MonoBehaviour
     private int level;
     
     public static LevelGoal instance;
+    
+    [SerializeField] private GameObject levelCompletedSound;
 
     private void Awake()
     {
@@ -32,8 +34,10 @@ public class LevelGoal : MonoBehaviour
         goalTextUI.text = "LEVEL GOAL:\n" + goalText;
     }
 
+    private bool isLevelCompleted = false;
     private void Update()
     {
+        if (isLevelCompleted) return;
         switch (goalType)
         {
             case Goal.SurviveTime:
@@ -59,6 +63,8 @@ public class LevelGoal : MonoBehaviour
 
     private void LevelFinish()
     {
+        isLevelCompleted = true;
+        Instantiate(levelCompletedSound, transform.position, Quaternion.identity);
         Debug.Log("Level finished");
     }
 

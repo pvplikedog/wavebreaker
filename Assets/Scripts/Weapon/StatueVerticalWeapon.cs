@@ -15,10 +15,13 @@ public class StatueVerticalWeapon : Weapon
     
     private Animator animator;
     private const string IS_HIT = "Hit";
+    
+    private AudioSource audioSource;
 
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         boxVisual.position = boxMidPoint.position;
         boxVisual.localScale = new Vector3(boxWidth, boxHeight, 1);
@@ -37,6 +40,10 @@ public class StatueVerticalWeapon : Weapon
 
     private void DoDamage()
     {
+        if (audioSource)
+        {
+            audioSource.Play();
+        }
         animator.SetTrigger(IS_HIT);
 
         var topLeft = new Vector2(boxMidPoint.position.x - boxWidth / 2, boxMidPoint.position.y + boxHeight / 2);

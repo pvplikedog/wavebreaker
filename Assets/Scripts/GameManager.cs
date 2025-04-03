@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private TMP_Text enemiesKilledDisplay;
 
+    private AudioSource levelUpSound;
+
 
     [Header("Damage Text Settings")] 
     public Canvas damageTextCanvas;
@@ -49,10 +51,14 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public int levelsToUpdate;
     private float stopwatchTime;
+    
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject statue;
 
     private void Awake()
     {
         Time.timeScale = 1;
+        levelUpSound = GetComponent<AudioSource>();
         Instance = this;
         DisableScreen();
     }
@@ -84,11 +90,14 @@ public class GameManager : MonoBehaviour
                 }
                 Time.timeScale = 0f;
                 damageCanvas.enabled = false;
+                player.SetActive(false);
+                statue.SetActive(false);
                 
                 break;
             case GameState.LevelUp:
                 if (!ChoosingUpgrade)
                 {
+                    if (levelUpSound) levelUpSound.Play();
                     // Debug.Log("LVL UP");
                     --levelsToUpdate;
                     ChoosingUpgrade = true;

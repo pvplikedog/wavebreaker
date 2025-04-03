@@ -15,10 +15,13 @@ public class MeleeBoxWeapon : Weapon
     
     [SerializeField] private Animator animator;
     private const string IS_HIT = "Hit";
+    
+    private AudioSource hitSound;
 
 
     private void Start()
     {
+        hitSound = GetComponent<AudioSource>();
         boxVisual.position = boxMidPoint.position;
         boxVisual.localScale = new Vector3(boxWidth, boxHeight, 1);
     }
@@ -39,6 +42,11 @@ public class MeleeBoxWeapon : Weapon
         if (animator)
         {
             animator.SetTrigger(IS_HIT);
+        }
+
+        if (hitSound)
+        {
+            hitSound.Play();
         }
         var topLeft = new Vector2(boxMidPoint.position.x - boxWidth / 2, boxMidPoint.position.y + boxHeight / 2);
         var bottomRight = new Vector2(boxMidPoint.position.x + boxWidth / 2, boxMidPoint.position.y - boxHeight / 2);

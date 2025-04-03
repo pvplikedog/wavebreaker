@@ -29,9 +29,12 @@ public class Enemy : MonoBehaviour
     private PlayerHealth _playerHealth;
     private StatueHealth _statueHealth;
     private AIPath aiPath;
+    
+    private AudioSource audioSource;
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         aiPath = GetComponent<AIPath>();
         _enemyGfx = GetComponent<EnemyGFX>();
         _collider = GetComponent<CircleCollider2D>();
@@ -85,6 +88,11 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (audioSource)
+        {
+            audioSource.Play();
+        }
+        
         if (damage > 0)
         {
             GameManager.GenerateFloatingText(Mathf.RoundToInt(damage).ToString(), transform);

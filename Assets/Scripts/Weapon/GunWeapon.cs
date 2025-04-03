@@ -7,6 +7,13 @@ public class GunWeapon : Weapon
     [SerializeField] private Transform target;
 
     [SerializeField] private float range = 3f;
+    
+    private AudioSource _audioSource;
+
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -51,6 +58,11 @@ public class GunWeapon : Weapon
 
     private void Shoot()
     {
+        if (_audioSource)
+        {
+            _audioSource.Play();
+        }
+        
         var BulletGO = Instantiate(bulletPrefab, transform.position, transform.rotation);
         var bullet = BulletGO.GetComponent<GunBullet>();
 

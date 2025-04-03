@@ -9,6 +9,13 @@ public class HardGunWeapon : Weapon
     [SerializeField] private float bulletFireRate = 3f;
     [SerializeField] private float bulletRadius = 0.2f;
     [SerializeField] private float bulletSpeed = 1f;
+    
+    private AudioSource _audio;
+    
+    private void Awake()
+    {
+        _audio = GetComponent<AudioSource>();
+    }   
 
     private void Update()
     {
@@ -44,6 +51,10 @@ public class HardGunWeapon : Weapon
 
     private void Shoot()
     {
+        if (_audio)
+        {
+            _audio.Play();
+        }
         var BulletGO = Instantiate(bulletPrefab, transform.position, transform.rotation);
         BulletGO.GetComponent<CircleProjectile>().Setup(bulletFireRate, bulletRadius, damage);
         BulletGO.GetComponent<Rigidbody2D>()
