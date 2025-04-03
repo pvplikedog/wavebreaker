@@ -19,6 +19,7 @@ public class LevelUpManager : MonoBehaviour
     // For first usage:
     private List<UpgradeOption> firstUpgradeOptions = new();
     private bool isFirst = true;
+    [SerializeField] private TMP_Text levelUpText;
 
     private void Start()
     {
@@ -92,11 +93,13 @@ public class LevelUpManager : MonoBehaviour
         var upgradeOptions_ = new List<UpgradeOption>();
         if (isFirst)
         {
+            levelUpText.text = "Choose your weapon:";
             isFirst = false;
             upgradeOptions_ = GetUpgradeOptions(firstUpgradeOptions);
         }
         else
         {
+            levelUpText.text = "LEVEL UP";
             upgradeOptions_ = GetUpgradeOptions(upgradeOptions);
         }
         foreach (var upgradeUI in upgradeUIOptions)

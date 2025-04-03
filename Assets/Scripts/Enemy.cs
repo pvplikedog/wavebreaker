@@ -109,6 +109,8 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        LevelGoal.instance.UpdateEnemiesKilled();
+        
         gameObject.tag = "Untagged";
         _collider.enabled = false;
         _enemyGfx.PlayDeathAnimation();

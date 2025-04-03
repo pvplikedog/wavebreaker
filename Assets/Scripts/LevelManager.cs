@@ -33,6 +33,9 @@ public class LevelManager : MonoBehaviour
         }
 
         levelBar.fillAmount = _curXP / XPToNextLvl;
+        
+        LevelGoal.instance.UpdateLevel(_curLvl);
+        
         if (levelsToUp > 0) gameManager.StartLevelUp(levelsToUp);
     }
 

@@ -32,18 +32,19 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private TMP_Text timeSurvivedDisplay;
 
-    [Header("Stopwatch")] [SerializeField] private float timeLimit; // Probably won't need.
-
     [SerializeField] private TMP_Text stopwatchDisplay;
 
     [SerializeField] private LevelUpManager levelUpManager;
+    
+    [SerializeField] private TMP_Text enemiesKilledDisplay;
+
 
     [Header("Damage Text Settings")] 
     public Canvas damageTextCanvas;
     public float textFontSize = 20f;
     public TMP_FontAsset textFont;
     public Camera referenceCamera;
-    
+    [SerializeField] private Canvas damageCanvas;
 
 
     [HideInInspector] public int levelsToUpdate;
@@ -51,13 +52,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1;
         Instance = this;
         DisableScreen();
     }
 
     private void Start()
     {
-        // Probably will change to random weapon on start
         StartLevelUp(1);
     }
 
@@ -81,8 +82,9 @@ public class GameManager : MonoBehaviour
                     IsGameOver = true;
                     DisplayResults();
                 }
-
-                // Handle game over logic
+                Time.timeScale = 0f;
+                damageCanvas.enabled = false;
+                
                 break;
             case GameState.LevelUp:
                 if (!ChoosingUpgrade)
@@ -149,6 +151,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         timeSurvivedDisplay.text = stopwatchDisplay.text;
+        enemiesKilledDisplay.text = LevelGoal.instance.GetEnemiesKilled().ToString();
         ChangeState(GameState.GameOver);
     }
 
@@ -183,6 +186,7 @@ public class GameManager : MonoBehaviour
     private void UpdateStopwatch()
     {
         stopwatchTime += Time.deltaTime;
+        LevelGoal.instance.UpdateSurviveTime(stopwatchTime);
         UpdateStopwatchDisplay();
     }
 
