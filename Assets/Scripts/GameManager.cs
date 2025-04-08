@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private LevelUpManager levelUpManager;
     
     [SerializeField] private TMP_Text enemiesKilledDisplay;
+    
+    [SerializeField] private LevelManager levelManager;
 
     private AudioSource levelUpSound;
 
@@ -161,6 +163,7 @@ public class GameManager : MonoBehaviour
     {
         timeSurvivedDisplay.text = stopwatchDisplay.text;
         enemiesKilledDisplay.text = LevelGoal.instance.GetEnemiesKilled().ToString();
+        AssignLevelReached(levelManager.GetCurrentLevel());
         ChangeState(GameState.GameOver);
     }
 

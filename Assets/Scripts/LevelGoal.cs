@@ -19,6 +19,7 @@ public class LevelGoal : MonoBehaviour
     [SerializeField] private string goalText;
     
     [SerializeField] private TMP_Text goalTextUI;
+    [SerializeField] private TMP_Text levelCompleteText;
     
     private int surviveTime;
     private int enemiesKilled;
@@ -27,6 +28,7 @@ public class LevelGoal : MonoBehaviour
     public static LevelGoal instance;
     
     [SerializeField] private GameObject levelCompletedSound;
+    [SerializeField] private GameLevelManager levelManager;
 
     private void Awake()
     {
@@ -65,7 +67,9 @@ public class LevelGoal : MonoBehaviour
     {
         isLevelCompleted = true;
         Instantiate(levelCompletedSound, transform.position, Quaternion.identity);
-        Debug.Log("Level finished");
+        levelCompleteText.text = "LEVEL COMPLETED!";
+        levelManager.LevelUp();
+        GameManager.Instance.GameOver();
     }
 
     public void UpdateSurviveTime(float time)
@@ -83,7 +87,7 @@ public class LevelGoal : MonoBehaviour
         this.level = level;
     }
 
-    public object GetEnemiesKilled()
+    public int GetEnemiesKilled()
     {
         return enemiesKilled;
     }
