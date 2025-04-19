@@ -29,12 +29,6 @@ public class GunWeapon : Weapon
         _fireCountdown -= Time.deltaTime;
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, range);
-    }
-
     private void UpdateTarget()
     {
         var enemies = GameObject.FindGameObjectsWithTag(enemyTag); // Performance issue, probably will need to rework.

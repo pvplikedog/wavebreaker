@@ -1,100 +1,94 @@
 using UnityEngine;
 
-namespace Pathfinding
-{
+namespace Pathfinding {
 	/// <summary>
-	///     Pruning of recast navmesh regions.
-	///     A RelevantGraphSurface component placed in the scene specifies that
-	///     the navmesh region it is inside should be included in the navmesh.
-	///     See: Pathfinding.RecastGraph.relevantGraphSurfaceMode
+	/// Pruning of recast navmesh regions.
+	/// A RelevantGraphSurface component placed in the scene specifies that
+	/// the navmesh region it is inside should be included in the navmesh.
+	///
+	/// See: Pathfinding.RecastGraph.relevantGraphSurfaceMode
 	/// </summary>
 	[AddComponentMenu("Pathfinding/Navmesh/RelevantGraphSurface")]
-    [HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_relevant_graph_surface.php")]
-    public class RelevantGraphSurface : VersionedMonoBehaviour
-    {
-        public float maxRange = 1;
+	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_relevant_graph_surface.php")]
+	public class RelevantGraphSurface : VersionedMonoBehaviour {
+		private static RelevantGraphSurface root;
 
-        public Vector3 Position { get; private set; }
+		public float maxRange = 1;
 
-        public RelevantGraphSurface Next { get; private set; }
+		private RelevantGraphSurface prev;
+		private RelevantGraphSurface next;
+		private Vector3 position;
 
-        public RelevantGraphSurface Prev { get; private set; }
+		public Vector3 Position {
+			get { return position; }
+		}
 
-        public static RelevantGraphSurface Root { get; private set; }
+		public RelevantGraphSurface Next {
+			get { return next; }
+		}
 
-        private void OnEnable()
-        {
-            UpdatePosition();
-            if (Root == null)
-            {
-                Root = this;
-            }
-            else
-            {
-                Next = Root;
-                Root.Prev = this;
-                Root = this;
-            }
-        }
+		public RelevantGraphSurface Prev {
+			get { return prev; }
+		}
 
-        private void OnDisable()
-        {
-            if (Root == this)
-            {
-                Root = Next;
-                if (Root != null) Root.Prev = null;
-            }
-            else
-            {
-                if (Prev != null) Prev.Next = Next;
-                if (Next != null) Next.Prev = Prev;
-            }
+		public static RelevantGraphSurface Root {
+			get { return root; }
+		}
 
-            Prev = null;
-            Next = null;
-        }
+		public void UpdatePosition () {
+			position = transform.position;
+		}
 
-        public void OnDrawGizmos()
-        {
-            Gizmos.color = new Color(57 / 255f, 211 / 255f, 46 / 255f, 0.4f);
-            Gizmos.DrawLine(transform.position - Vector3.up * maxRange, transform.position + Vector3.up * maxRange);
-        }
+		void OnEnable () {
+			UpdatePosition();
+			if (root == null) {
+				root = this;
+			} else {
+				next = root;
+				root.prev = this;
+				root = this;
+			}
+		}
 
-        public void OnDrawGizmosSelected()
-        {
-            Gizmos.color = new Color(57 / 255f, 211 / 255f, 46 / 255f);
-            Gizmos.DrawLine(transform.position - Vector3.up * maxRange, transform.position + Vector3.up * maxRange);
-        }
+		void OnDisable () {
+			if (root == this) {
+				root = next;
+				if (root != null) root.prev = null;
+			} else {
+				if (prev != null) prev.next = next;
+				if (next != null) next.prev = prev;
+			}
+			prev = null;
+			next = null;
+		}
 
-        public void UpdatePosition()
-        {
-            Position = transform.position;
-        }
+		/// <summary>
+		/// Updates the positions of all relevant graph surface components.
+		/// Required to be able to use the position property reliably.
+		/// </summary>
+		public static void UpdateAllPositions () {
+			RelevantGraphSurface c = root;
 
-        /// <summary>
-        ///     Updates the positions of all relevant graph surface components.
-        ///     Required to be able to use the position property reliably.
-        /// </summary>
-        public static void UpdateAllPositions()
-        {
-            var c = Root;
+			while (c != null) { c.UpdatePosition(); c = c.Next; }
+		}
 
-            while (c != null)
-            {
-                c.UpdatePosition();
-                c = c.Next;
-            }
-        }
+		public static void FindAllGraphSurfaces () {
+			var srf = GameObject.FindObjectsOfType(typeof(RelevantGraphSurface)) as RelevantGraphSurface[];
 
-        public static void FindAllGraphSurfaces()
-        {
-            var srf = FindObjectsOfType(typeof(RelevantGraphSurface)) as RelevantGraphSurface[];
+			for (int i = 0; i < srf.Length; i++) {
+				srf[i].OnDisable();
+				srf[i].OnEnable();
+			}
+		}
 
-            for (var i = 0; i < srf.Length; i++)
-            {
-                srf[i].OnDisable();
-                srf[i].OnEnable();
-            }
-        }
-    }
+		public void OnDrawGizmos () {
+			Gizmos.color = new Color(57/255f, 211/255f, 46/255f, 0.4f);
+			Gizmos.DrawLine(transform.position - Vector3.up*maxRange, transform.position + Vector3.up*maxRange);
+		}
+
+		public void OnDrawGizmosSelected () {
+			Gizmos.color = new Color(57/255f, 211/255f, 46/255f);
+			Gizmos.DrawLine(transform.position - Vector3.up*maxRange, transform.position + Vector3.up*maxRange);
+		}
+	}
 }

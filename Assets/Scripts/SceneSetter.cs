@@ -12,7 +12,7 @@ public class SceneSetter : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene("Level" + gameLevelManager.GetCurrentLevel().ToString());
+        SceneManager.LoadScene("Level " + gameLevelManager.GetCurrentLevel().ToString());
     }
 
     public void Quit()

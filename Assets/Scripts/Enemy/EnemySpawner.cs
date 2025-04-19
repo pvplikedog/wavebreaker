@@ -40,6 +40,7 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         CalculateWaveQuota();
+        firstWave();
     }
 
     private void Update()
@@ -56,6 +57,17 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemies();
             spawnTimer = 0f;
         }
+    }
+    
+    void firstWave()
+    {
+        if (currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0)
+        {
+            StartCoroutine(BeginNextWave());
+        }
+
+        spawnTimer = 0f;
+        SpawnEnemies();
     }
     
     IEnumerator BeginNextWave()
@@ -87,7 +99,6 @@ public class EnemySpawner : MonoBehaviour
             {
                 if (enemyGroup.spawnCount < enemyGroup.enemyCount)
                 {
-                    Debug.Log(spawnPoints);
                     Vector2 spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Count)].position;
                     var spawnedEnemy = Instantiate(enemyGroup.enemyPrefab, spawnPosition, Quaternion.identity);
                     SetEnemyTarget(spawnedEnemy);

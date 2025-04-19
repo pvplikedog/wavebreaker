@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour
         
         if (damage > 0)
         {
-            GameManager.GenerateFloatingText(Mathf.RoundToInt(damage).ToString(), transform);
+            GameManager.GenerateFloatingText(Mathf.RoundToInt(damage * PlayerStats.instance.DamageMultiplier).ToString(), transform);
         }
         health -= damage * PlayerStats.instance.DamageMultiplier;
         _enemyGfx.PlayTakeDamgeAnimation();

@@ -28,11 +28,14 @@ public class LevelManager : MonoBehaviour
             _curLvl += 1;
             levelText.text = $"LEVEL {_curLvl}";
             _curXP -= XPToNextLvl;
-            XPToNextLvl *= 1.2f;
+            XPToNextLvl *= 1.25f;
             levelsToUp++;
         }
-
-        levelBar.fillAmount = _curXP / XPToNextLvl;
+        
+        if (levelBar)
+        {
+            levelBar.fillAmount = _curXP / XPToNextLvl;
+        }
         
         LevelGoal.instance.UpdateLevel(_curLvl);
         

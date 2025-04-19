@@ -1,24 +1,19 @@
-using System;
+namespace Pathfinding {
+	/// <summary>Added to editors of custom graph types</summary>
+	[System.AttributeUsage(System.AttributeTargets.All, Inherited = false, AllowMultiple = true)]
+	public class CustomGraphEditorAttribute : System.Attribute {
+		/// <summary>Graph type which this is an editor for</summary>
+		public System.Type graphType;
 
-namespace Pathfinding
-{
-    /// <summary>Added to editors of custom graph types</summary>
-    [AttributeUsage(AttributeTargets.All, Inherited = false, AllowMultiple = true)]
-    public class CustomGraphEditorAttribute : Attribute
-    {
-        /// <summary>Name displayed in the inpector</summary>
-        public string displayName;
+		/// <summary>Name displayed in the inpector</summary>
+		public string displayName;
 
-        /// <summary>Type of the editor for the graph</summary>
-        public Type editorType;
+		/// <summary>Type of the editor for the graph</summary>
+		public System.Type editorType;
 
-        /// <summary>Graph type which this is an editor for</summary>
-        public Type graphType;
-
-        public CustomGraphEditorAttribute(Type t, string displayName)
-        {
-            graphType = t;
-            this.displayName = displayName;
-        }
-    }
+		public CustomGraphEditorAttribute (System.Type t, string displayName) {
+			graphType = t;
+			this.displayName = displayName;
+		}
+	}
 }
