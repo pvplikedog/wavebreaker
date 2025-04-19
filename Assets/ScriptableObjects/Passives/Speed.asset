@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
+  m_Name: Speed
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 21300000, guid: 5319e90cdef08eb4a90ed29d73271916, type: 3}
+  UpgradeType: 8
+  MaxLvl: 5
+  Names:
+  - Speed unlock
+  - Speed LVL 2
+  - Speed LVL 3
+  - Speed LVL 4
+  - Speed LVL 5
+  Descriptions:
+  - moves 10% faster
+  - moves 20% faster
+  - moves 30% faster
+  - moves 40% faster
+  - moves 50% faster

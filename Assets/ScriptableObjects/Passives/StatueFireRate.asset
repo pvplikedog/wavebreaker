@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b901f9daf871348d0a16f8503916e581, type: 3}
+  m_Name: StatueFireRate
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 21300000, guid: 17c2d0550f9d2f9418f458279eb57c65, type: 3}
+  UpgradeType: 15
+  MaxLvl: 5
+  Names:
+  - Statue rapid fire unlock
+  - Statue rapid fire LVL 2
+  - Statue rapid fire LVL 3
+  - Statue rapid fire LVL 4
+  - Statue rapid fire LVL 5
+  Descriptions:
+  - Statue shoot 10% faster
+  - Statue shoot 20% faster
+  - Statue shoot 30% faster
+  - Statue shoot 40% faster
+  - Statue shoot 50% faster
